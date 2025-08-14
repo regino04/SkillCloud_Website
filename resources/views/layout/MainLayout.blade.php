@@ -12,7 +12,7 @@
   <!-- <link href="Kelly/assets/img/favicon.png" rel="icon">
     -->
 
-  <link rel="icon" href="/logo/logo.jpg" type="image/jpeg">
+  <link rel="icon" href="/logo/skill-cloud-logo.png" type="image/jpeg">
 
   <link href="Kelly/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -83,11 +83,13 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="Kelly/assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Kelly</h1>
+        <!-- <h1 class="sitename">Kelly</h1> -->
+       
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" style="margin: auto; max-width:1280px" >
         <ul>
+            <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt="">
           <li><a href="/" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
@@ -115,12 +117,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
+  
 
     </div>
   </header>
