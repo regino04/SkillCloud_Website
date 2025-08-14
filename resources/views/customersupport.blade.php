@@ -148,8 +148,23 @@
       border-radius: 5px;
       font-family: 'Poppins', sans-serif;
       /* New font */
+  overflow: hidden;
 
     }
+    details[open] summary ~ * {
+  animation: detailsOpen 2s ease-in-out;
+}
+
+@keyframes detailsOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
     .paragraph-details {
       margin-bottom: -15px;
@@ -191,30 +206,30 @@
 
 <body>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
-        <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+    <div class="container">
 
 
-        <div class="collapse navbar-collapse" id="navbarNav" style="max-width: 1280px; margin:auto;">>
-            <ul class="navbar-nav w-100 justify-content-center gap-3">
-                <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt="">
+    <div class="collapse navbar-collapse" id="navbarNav" style="max-width: 1280px; margin:auto;">>
+      <ul class="navbar-nav w-100 justify-content-center gap-3">
+        <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt="">
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="py-5" style="background: linear-gradient(135deg, #00a28b, #0071ce); color: #fff; height:300px">
@@ -222,7 +237,7 @@
       <br><br><br><br><br><br>
       <h1 class="mb-3">How can we help you?</h1>
       <br>
-      
+
       <div hidden class="input-group w-20 mx-auto shadow rounded-pill overflow-hidden" style="max-width: 550px; height: 40px;">
         <input type="text" class="form-control border-0 py-1 px-3" placeholder="Search articles" style="height: 100%;">
         <button class="btn btn-dark d-flex align-items-center justify-content-center px-3" style="height: 100%;">
@@ -300,8 +315,15 @@
 
     </div>
   </section>
-
-  <div style="max-width: 1250px;margin:auto;">
+  <br><br>
+  <div style="text-align: center;">
+    <label for="" style="background-color: #ccc;color:#0071ce;  border-radius:16px;width: 100px;text-align:center">Benefits</label>
+    <br><br>
+    <h2>Frequently Asked Questions</h2>
+    <label>Your outsourcing questions, answered.</label>
+    <br><br>
+  </div>
+  <div style="max-width: 1250px;margin:auto;margin-bottom:200px">
 
     <details>
       <summary>How soon can I get started?</summary>
@@ -356,6 +378,24 @@
         }
       });
     });
+    document.querySelectorAll("details").forEach((el) => {
+  el.addEventListener("toggle", function () {
+    if (this.open) {
+      let content = this.querySelectorAll(".paragraph-details");
+      this.style.overflow = "hidden";
+      this.animate(
+        [
+          { height: "0px", opacity: 0 },
+          { height: this.scrollHeight + "px", opacity: 1 }
+        ],
+        {
+          duration: 300,
+          easing: "ease"
+        }
+      );
+    }
+  });
+});
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
