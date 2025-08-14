@@ -5,7 +5,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home');
 });
-Route::get('/test', function () {
-    return view('welcome');
+Route::get('/1', function () {
+    return view('customersupport');
+});
+    
+Route::get('/2', function () {
+    return view('customersupport2');
 });
     

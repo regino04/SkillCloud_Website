@@ -45,15 +45,15 @@
 <body>
 
     <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" 
-    <div class="container">
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+        <div class="container">
+
 
         <div class="collapse navbar-collapse" id="navbarNav" style="max-width: 1280px; margin:auto;">>
             <ul class="navbar-nav w-100 justify-content-center gap-3">
-                        <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt="">
-   
-            <li class="nav-item">
+                <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt="">
+
+                <li class="nav-item">
                     <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
@@ -67,8 +67,8 @@
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+        </div>
+    </nav>
 
 
 
