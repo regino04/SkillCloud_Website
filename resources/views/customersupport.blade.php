@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
     .category-card {
@@ -138,38 +139,37 @@
     }
 
     details {
-      margin: 10px 0;
 
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-family: 'Poppins', sans-serif;
       /* New font */
-  overflow: hidden;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+
 
     }
-    details[open] summary ~ * {
-  animation: detailsOpen 2s ease-in-out;
-}
 
-@keyframes detailsOpen {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-    .paragraph-details {
-      margin-bottom: -15px;
-      margin-top: 10px
+    details[open] summary~* {
+      animation: detailsOpen 2s ease-in-out;
     }
+
+
+
+    @keyframes detailsOpen {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
 
     summary {
       cursor: pointer;
@@ -177,6 +177,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 20px;
+      margin-bottom: 20px;
     }
 
 
@@ -201,44 +203,174 @@
     details[open] summary::after {
       transform: rotate(180deg);
     }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      /* Centers it horizontally */
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 10px;
+      color: #001f3f;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 5px;
+    }
+
+    .talk-btn {
+      background-color: #0d2432;
+      /* Navy blue */
+      color: white;
+      border-radius: 30px;
+      /* Mas pill-shaped */
+      padding: 8px 16px;
+      width: 150px;
+      height: 50px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .talk-btn:hover {
+      background-color: #003366;
+      /* Mas bright na navy */
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .nav-link {
+      position: relative;
+      color: #000000;
+      transition: color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background-color: #007bff;
+      transition: width 0.3s ease;
+    }
+
+    /* Dating active animation — ngayon nasa not active hover */
+    .nav-link:not(.active):hover::after {
+      width: 100%;
+    }
+
+    /* Dating hover animation — ngayon nasa active */
+    .nav-link.active::after {
+      width: 100%;
+      background-color: #ff6600;
+      /* pwede mong palitan */
+    }
+
+    /* Kapag active pero hindi naka-hover, bawasan mo yung effect para kabaligtaran */
+    .nav-link.active:hover::after {
+      width: 0;
+    }
   </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+
+    <div class="container" style="min-width: 90%;">
 
 
-    <div class="collapse navbar-collapse" id="navbarNav" style="max-width: 1280px; margin:auto;">>
-      <ul class="navbar-nav w-100 justify-content-center gap-3">
-        <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt="">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 d-flex align-items-center justify-content-between">
 
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
+          <li style="margin-right: 20px;margin-left: -20px;">
+            <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="">
+          </li>
+          <!-- <img src="/logo/skill-cloud-logo.png" style="height: 50px;" alt=""> -->
+          <!-- <img style="height: 50px;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/68343bcacbe2a49dc010957e_cce434c5ffc3be4fa8cd0852bc1f3cb1_logo.svg" loading="lazy" alt="Skill Cloud" height="Auto" class="image-navbar-logo"> -->
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">What We Do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">industries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Success Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing Plan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Join our Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li style="margin-left: 20px;margin-right: -20px;">
+<label class="talk-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+              <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
+              Let's Talk &ensp; <i class="bi bi-hand-index-thumb-fill"></i>
+            </label>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="py-5" style="background: linear-gradient(135deg, #00a28b, #0071ce); color: #fff; height:300px">
+  <!-- <section class="py-5" style="background: linear-gradient(135deg, #00a28b, #0071ce); color: #fff; height:300px"> -->
+  <section " class=" py-5" style="background-image: url('banner/banner.png');background-size: cover; 
+ color: #fff; height:300px">
+
     <div class="container text-center">
       <br><br><br><br><br><br>
-      <h1 class="mb-3">How can we help you?</h1>
-      <br>
+      <h1 style="background-color: rgba(255, 255, 255, 0.8); 
+             color: #222; 
+             font-weight: bold; 
+             font-size: 28px; 
+             width: 450px; 
+             height: 80px;  
+             display: flex; 
+             justify-content: center; 
+             align-items: center; 
+             text-align: center; 
+             margin: auto;
+             border-radius: 8px;">
+        How can we help you?
+      </h1> <br>
 
-      <div hidden class="input-group w-20 mx-auto shadow rounded-pill overflow-hidden" style="max-width: 550px; height: 40px;">
+      <div hidden class="input-group w-20 mx-auto shadow rounded-pill overflow-hidden"
+        style="max-width: 550px; height: 40px;">
         <input type="text" class="form-control border-0 py-1 px-3" placeholder="Search articles" style="height: 100%;">
         <button class="btn btn-dark d-flex align-items-center justify-content-center px-3" style="height: 100%;">
           <i class="bi bi-search fs-6"></i>
@@ -252,7 +384,7 @@
   <section class="py-5" style="max-width: 1000px;margin:auto">
     <div class="container">
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="category-card button1" style="cursor: pointer;">
             <div class="category-icon"><i class="bi bi-headset"></i></div>
             <div>
@@ -262,7 +394,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="category-card button2" style="cursor: pointer;">
             <div class="category-icon"><i class="bi bi-lightbulb"></i></div>
             <div>
@@ -272,7 +404,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="category-card button3" style="cursor: pointer;">
             <div class="category-icon"><i class="bi bi-people"></i></div>
             <div>
@@ -282,7 +414,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="category-card button4" style="cursor: pointer;">
             <div class="category-icon"><i class="bi bi-megaphone"></i></div>
             <div>
@@ -292,7 +424,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="category-card button5" style="cursor: pointer;">
             <div class="category-icon"><i class="bi bi-cash-stack"></i></div>
             <div>
@@ -302,7 +434,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="category-card button6" style="cursor: pointer;">
             <div class="category-icon"><i class="bi bi-cart-check"></i></div>
             <div>
@@ -317,55 +449,119 @@
   </section>
   <br><br>
   <div style="text-align: center;">
-    <label for="" style="background-color: #ccc;color:#0071ce;  border-radius:16px;width: 100px;text-align:center">Benefits</label>
+    <label data-aos="fade-up" for=""
+      style="background-color: #ccc;color:#0071ce;  border-radius:16px;width: 100px;text-align:center">Benefits</label>
     <br><br>
-    <h2>Frequently Asked Questions</h2>
-    <label>Your outsourcing questions, answered.</label>
+    <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+    <label data-aos="fade-up">Your outsourcing questions, answered.</label>
     <br><br>
   </div>
-  <div style="max-width: 1250px;margin:auto;margin-bottom:200px">
+  <div data-aos="fade-up" style="max-width: 1250px;margin:auto;margin-bottom:100px">
 
-    <details>
+    <details data-aos="fade-up" class="floating-btn">
       <summary>How soon can I get started?</summary>
-      <p class="paragraph-details">Within a week. That's the average time it takes to get you up and running outsourcing to the Philippines... most clients are rolling within the first few days.</p>
+      <p class="paragraph-details">Within a week. That's the average time it takes to get you up and running outsourcing
+        to the Philippines... most clients are rolling within the first few days.</p>
     </details>
 
-    <details>
+    <details data-aos="fade-up">
       <summary>What happens if my Filipino hire suddenly stops showing up or quits unexpectedly?</summary>
-      <p class="paragraph-details">Our 6 month replacement guarantee has you covered in case this happens (which is rare).</p>
-      <p class="paragraph-details">If your hire ghosts you or leaves suddenly, we'll replace them immediately at no extra cost.</p>
+      <p class="paragraph-details">Our 6 month replacement guarantee has you covered in case this happens (which is
+        rare).</p>
+      <p class="paragraph-details">If your hire ghosts you or leaves suddenly, we'll replace them immediately at no
+        extra cost.</p>
     </details>
 
-    <details>
+    <details data-aos="fade-up">
       <summary>What's the real cost difference compared to hiring locally, and are there any hidden fees?</summary>
-      <p class="paragraph-details">You'll save 60–75% compared to equivalent Australian talent – a typical $90K Australian role costs about $25–35K through us.</p>
+      <p class="paragraph-details">You'll save 60–75% compared to equivalent Australian talent – a typical $90K
+        Australian role costs about $25–35K through us.</p>
     </details>
 
-    <details>
+    <details data-aos="fade-up">
       <summary>How do I communicate with my team?</summary>
-      <p class="paragraph-details">Communication is dead simple. Your team connects through your existing platforms: Slack, Zoom, Microsoft, Google, or any tool in your stack.</p>
+      <p class="paragraph-details">Communication is dead simple. Your team connects through your existing platforms:
+        Slack, Zoom, Microsoft, Google, or any tool in your stack.</p>
     </details>
-    <details>
-      <summary>How fast can I really get matched with Filipino talent... what happens if your "48-hour" promise doesn’t work out?</summary>
-      <p class="paragraph-details">Most matches happen within 48 hours, but complex roles might take up to a week. In any case, we only present pre-vetted candidates.</p>
+    <details data-aos="fade-up">
+      <summary>How fast can I really get matched with Filipino talent... what happens if your "48-hour" promise doesn’t
+        work out?</summary>
+      <p class="paragraph-details">Most matches happen within 48 hours, but complex roles might take up to a week. In
+        any case, we only present pre-vetted candidates.</p>
     </details>
 
-    <details>
+    <details data-aos="fade-up">
       <summary>Do I need to handle Filipino tax laws, payroll, or employment regulations myself?</summary>
-      <p class="paragraph-details">Absolutely not. Your Filipino team member is technically employed by us in the Philippines, so you have ZERO administrative or legal headaches. You just pay one simple invoice.</p>
+      <p class="paragraph-details">Absolutely not. Your Filipino team member is technically employed by us in the
+        Philippines, so you have ZERO administrative or legal headaches. You just pay one simple invoice.</p>
     </details>
 
-    <details>
+    <details data-aos="fade-up">
       <summary>What industries do you serve?</summary>
-      <p class="paragraph-details">Our outsourcing providers in Philippines have worked across industries like construction, accounting, education, SaaS, and eCommerce. Chances are, we can support you too!</p>
+      <p class="paragraph-details">Our outsourcing providers in Philippines have worked across industries like
+        construction, accounting, education, SaaS, and eCommerce. Chances are, we can support you too!</p>
     </details>
 
-    <details>
+    <details data-aos="fade-up">
       <summary>What about security & compliance?</summary>
-      <p class="paragraph-details">Our outsourcing company maintains ironclad privacy (fully compliant) across all operations. Nothing stored onsite — we use Microsoft’s servers and services... same as you!</p>
+      <p class="paragraph-details">Our outsourcing company maintains ironclad privacy (fully compliant) across all
+        operations. Nothing stored onsite — we use Microsoft’s servers and services... same as you!</p>
     </details>
 
   </div>
+
+  <footer style="max-width: 1024px; margin:auto;margin-bottom:50px;" id="footer" class="footer light-background">
+
+    <div class="footer-container">
+      <section class="footer-col" aria-labelledby="nav-title">
+        <h4 id="nav-title">Navigate</h4>
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Our team</li>
+          <li>Services</li>
+          <li>Pricing</li>
+          <li>Testimonials</li>
+        </ul>
+      </section>
+
+      <section class="footer-col" aria-labelledby="follow-title">
+        <h4 id="follow-title">Follow</h4>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>Linkedin</li>
+          <li>YouTube</li>
+          <li>X</li>
+        </ul>
+      </section>
+
+      <section class="footer-col" aria-labelledby="contact-title">
+        <h4 id="contact-title">Contact</h4>
+        <ul>
+          <li>Call Us: +(+61) 7 2146 9086</li>
+          <li>Email Us: hi@skillcloud.au</li>
+          <li>Customer Support</li>
+        </ul>
+      </section>
+
+      <section class="footer-col" aria-labelledby="visit-title">
+        <h4 id="visit-title">Visit</h4>
+        <ul>
+          <li><strong>Philippines:</strong><br />
+            Suite 4022, 168 Golden Rock Bldg. Salcedo St Makati City PH
+          </li>
+          <li><strong>Australia:</strong><br />
+            2/290 Boundary Street<br />
+            Spring Hill, Brisbane<br />
+            4000 Queensland, Australia
+          </li>
+        </ul>
+      </section>
+    </div>
+
+  </footer>
+
   <script>
     document.querySelectorAll("details").forEach((targetDetail) => {
       targetDetail.addEventListener("toggle", () => {
@@ -379,25 +575,43 @@
       });
     });
     document.querySelectorAll("details").forEach((el) => {
-  el.addEventListener("toggle", function () {
-    if (this.open) {
-      let content = this.querySelectorAll(".paragraph-details");
-      this.style.overflow = "hidden";
-      this.animate(
-        [
-          { height: "0px", opacity: 0 },
-          { height: this.scrollHeight + "px", opacity: 1 }
-        ],
-        {
-          duration: 300,
-          easing: "ease"
+      el.addEventListener("toggle", function () {
+        if (this.open) {
+          let content = this.querySelectorAll(".paragraph-details");
+          this.style.overflow = "hidden";
+          this.animate(
+            [{
+              height: "0px",
+              opacity: 0
+            },
+            {
+              height: this.scrollHeight + "px",
+              opacity: 1
+            }
+            ], {
+            duration: 300,
+            easing: "ease"
+          }
+          );
         }
-      );
-    }
-  });
-});
+      });
+    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        AOS.init({
+          duration: 1500,
+          once: true,
+          offset: 0
+        });
+      }, 300);
+    });
+  </script>
 </body>
 
 </html>
