@@ -208,20 +208,31 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 20px;
-      max-width: 1280px;
-      margin: 0 auto;
+      gap: 45px;
+
+      width: 80%;
+      margin: auto;
+
       /* Centers it horizontally */
     }
 
-    .footer-col {
-      flex: 1;
-      min-width: 200px;
-    }
+
 
     .footer-col h4 {
       margin-bottom: 10px;
-      color: #001f3f;
+      color: #000080;
+      font-size: 16px;
+      font-weight: 500;
+  font-family: 'Parkin Sans', sans-serif;
+
+    }
+      .footer-col label {
+      margin-bottom: 10px;
+      color: #000080;
+      font-size: 16px;
+      font-weight: 500;
+  font-family: 'Parkin Sans', sans-serif;
+
     }
 
     .footer-col ul {
@@ -231,8 +242,13 @@
     }
 
     .footer-col ul li {
-      margin-bottom: 5px;
-    }
+  margin-bottom: 5px;
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Parkin Sans', sans-serif;
+  line-height: 1.5;
+}
+
 
     .talk-btn {
       background-color: #0d2432;
@@ -337,7 +353,7 @@
             <a class="nav-link" href="#">Blog</a>
           </li>
           <li style="margin-left: 20px;margin-right: -20px;">
-<label class="talk-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+            <label class="talk-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
               <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
               Let's Talk &ensp; <i class="bi bi-hand-index-thumb-fill"></i>
             </label>
@@ -510,11 +526,11 @@
 
   </div>
 
-  <footer style="max-width: 1024px; margin:auto;margin-bottom:50px;" id="footer" class="footer light-background">
+  <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;" id="footer" class="footer light-background">
 
-    <div class="footer-container">
-      <section class="footer-col" aria-labelledby="nav-title">
-        <h4 id="nav-title">Navigate</h4>
+    <div  class="footer-container">
+      <section data-aos="fade-up" data-aos-delay="0" class="footer-col" style="max-width: 99px;" aria-labelledby="nav-title">
+        <label id="nav-title">Navigate</label>
         <ul>
           <li>Home</li>
           <li>About us</li>
@@ -525,7 +541,7 @@
         </ul>
       </section>
 
-      <section class="footer-col" aria-labelledby="follow-title">
+      <section data-aos="fade-up" data-aos-delay="200"  class="footer-col" style="max-width: 92px;" aria-labelledby="follow-title">
         <h4 id="follow-title">Follow</h4>
         <ul>
           <li>Instagram</li>
@@ -536,7 +552,7 @@
         </ul>
       </section>
 
-      <section class="footer-col" aria-labelledby="contact-title">
+      <section  data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;" aria-labelledby="contact-title">
         <h4 id="contact-title">Contact</h4>
         <ul>
           <li>Call Us: +(+61) 7 2146 9086</li>
@@ -545,13 +561,13 @@
         </ul>
       </section>
 
-      <section class="footer-col" aria-labelledby="visit-title">
+      <section data-aos="fade-up"  data-aos-delay="600"class="footer-col" style="max-width: 181px;" aria-labelledby="visit-title">
         <h4 id="visit-title">Visit</h4>
         <ul>
-          <li><strong>Philippines:</strong><br />
+          <li>Philippines:<br />
             Suite 4022, 168 Golden Rock Bldg. Salcedo St Makati City PH
           </li>
-          <li><strong>Australia:</strong><br />
+          <li>Australia:<br />
             2/290 Boundary Street<br />
             Spring Hill, Brisbane<br />
             4000 Queensland, Australia
@@ -575,23 +591,23 @@
       });
     });
     document.querySelectorAll("details").forEach((el) => {
-      el.addEventListener("toggle", function () {
+      el.addEventListener("toggle", function() {
         if (this.open) {
           let content = this.querySelectorAll(".paragraph-details");
           this.style.overflow = "hidden";
           this.animate(
             [{
-              height: "0px",
-              opacity: 0
-            },
-            {
-              height: this.scrollHeight + "px",
-              opacity: 1
-            }
+                height: "0px",
+                opacity: 0
+              },
+              {
+                height: this.scrollHeight + "px",
+                opacity: 1
+              }
             ], {
-            duration: 300,
-            easing: "ease"
-          }
+              duration: 300,
+              easing: "ease"
+            }
           );
         }
       });
@@ -602,8 +618,8 @@
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
         AOS.init({
           duration: 1500,
           once: true,
