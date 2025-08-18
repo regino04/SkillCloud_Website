@@ -223,15 +223,16 @@
       color: #000080;
       font-size: 16px;
       font-weight: 500;
-  font-family: 'Parkin Sans', sans-serif;
+      font-family: 'Parkin Sans', sans-serif;
 
     }
-      .footer-col label {
+
+    .footer-col label {
       margin-bottom: 10px;
       color: #000080;
       font-size: 16px;
       font-weight: 500;
-  font-family: 'Parkin Sans', sans-serif;
+      font-family: 'Parkin Sans', sans-serif;
 
     }
 
@@ -242,12 +243,12 @@
     }
 
     .footer-col ul li {
-  margin-bottom: 5px;
-  color: #000000;
-  font-size: 16px;
-  font-family: 'Parkin Sans', sans-serif;
-  line-height: 1.5;
-}
+      margin-bottom: 5px;
+      color: #000000;
+      font-size: 16px;
+      font-family: 'Parkin Sans', sans-serif;
+      line-height: 1.5;
+    }
 
 
     .talk-btn {
@@ -268,6 +269,32 @@
     }
 
     .talk-btn:hover {
+      background-color: #003366;
+      /* Mas bright na navy */
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .talent-btn {
+      background-color: #0d2432;
+      /* Navy blue */
+      color: white;
+      border-radius: 30px;
+      /* Mas pill-shaped */
+      padding: 8px 16px;
+      width: 211px;
+      height: 50px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .talent-btn:hover {
       background-color: #003366;
       /* Mas bright na navy */
       transform: translateY(-2px);
@@ -317,7 +344,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
 
-    <div class="container" style="min-width: 90%;">
+    <div class="container" style="min-width: 1280px;">
 
 
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -525,10 +552,149 @@
     </details>
 
   </div>
+  <div style="background-color: #24bdf0;height: 895px;width:100%">
+    <br>
+    <br>
+    <br>
+    <div class="container" style="display:flex; flex-direction: column;align-items:center;justify-content:center;gap: 40px;">
 
-  <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;" id="footer" class="footer light-background">
+      <style>
+        .custom-h2 {
+          color: #fff;
+          font-size: px;
+          line-height: 1.2;
+          font-family: 'Poppins', sans-serif;
 
-    <div  class="footer-container">
+        }
+      </style>
+
+      <h2 class="custom-h2" style="font-weight:400;">Get started with Skill Cloud…</h2>
+      <h2 class="custom-h2" style="font-weight:800;">Your workforce multiplier™!</h2>
+      <h2 class="custom-h2" style="font-weight:600;">Discover a smarter</h2>
+      <h2 class="custom-h2" style="margin:-50px;font-weight:600;color:#001f3f;">faster way to hire.</h2><br>
+      <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+        <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
+        Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
+      </label>
+      <style>
+        .image-card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+       
+        }
+
+        .cards {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          position: relative;
+        }
+
+        .card {
+          position: relative;
+          border-radius: 14px;
+          overflow: hidden;
+          width: 230px;
+          height: 310px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          transition: transform 0.3s ease, z-index 0.3s ease;
+        }
+
+        .card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        /* Info text inside card */
+        .info {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          color: #fff;
+          font-family: sans-serif;
+        }
+
+        .info h4 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .info p {
+          margin: 2px 0 0;
+          font-size: 12px;
+        }
+
+        /* Badge */
+        .badge {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          background: white;
+          color: #333;
+          font-size: 12px;
+          padding: 4px 8px;
+          border-radius: 12px;
+          font-weight: 500;
+        }
+
+        /* Left tilt */
+        .card.left {
+          transform: rotate(-5deg) translateY(20px);
+          z-index: 1;
+        }
+
+        /* Center card bigger & front */
+        .card.center {
+          width: 285px;
+          height: 380px;
+          z-index: 2;
+        }
+
+        /* Right tilt */
+        .card.right {
+          transform: rotate(5deg) translateY(20px);
+          z-index: 1;
+        }
+      </style>
+      <div class="image-card">
+        <div class="cards">
+          <!-- Left Card -->
+          <div class="card left">
+            <img src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/67d092d443c5252a04041cab_Men%202.avif" alt="">
+            <div class="info">
+              <h4>Jacob Galang</h4>
+              <p>Social Media Manager</p>
+            </div>
+          </div>
+
+          <!-- Center Card -->
+          <div class="card center">
+            <img src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/67d0960a606a8f3b733306af_3.avif" alt="">
+            <div class="info">
+              <h4>Hailey Nicolas</h4>
+              <p>Marketing Operations Manager</p>
+            </div>
+          </div>
+
+          <!-- Right Card -->
+          <div class="card right">
+            <img src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/67d0ad27333d243098a7359a_4.avif" alt="">
+            <div class="info">
+              <h4>Sanine Villarin</h4>
+              <p>Marketing Specialist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;margin-top:50px;" id="footer" class="footer light-background">
+
+    <div class="footer-container">
       <section data-aos="fade-up" data-aos-delay="0" class="footer-col" style="max-width: 99px;" aria-labelledby="nav-title">
         <label id="nav-title">Navigate</label>
         <ul>
@@ -541,7 +707,7 @@
         </ul>
       </section>
 
-      <section data-aos="fade-up" data-aos-delay="200"  class="footer-col" style="max-width: 92px;" aria-labelledby="follow-title">
+      <section data-aos="fade-up" data-aos-delay="200" class="footer-col" style="max-width: 92px;" aria-labelledby="follow-title">
         <h4 id="follow-title">Follow</h4>
         <ul>
           <li>Instagram</li>
@@ -552,7 +718,7 @@
         </ul>
       </section>
 
-      <section  data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;" aria-labelledby="contact-title">
+      <section data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;" aria-labelledby="contact-title">
         <h4 id="contact-title">Contact</h4>
         <ul>
           <li>Call Us: +(+61) 7 2146 9086</li>
@@ -561,7 +727,7 @@
         </ul>
       </section>
 
-      <section data-aos="fade-up"  data-aos-delay="600"class="footer-col" style="max-width: 181px;" aria-labelledby="visit-title">
+      <section data-aos="fade-up" data-aos-delay="600" class="footer-col" style="max-width: 181px;" aria-labelledby="visit-title">
         <h4 id="visit-title">Visit</h4>
         <ul>
           <li>Philippines:<br />
