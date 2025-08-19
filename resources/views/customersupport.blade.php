@@ -443,7 +443,7 @@
 color: #fff; height:300px">
 
     <div class="container text-center">
-      <br><br><br><br>
+      <br><br><br><br><br><br>
       <h1 style="background-color: rgba(255, 255, 255, 0.8); 
              color: #222; 
              font-weight: bold; 
@@ -604,7 +604,12 @@ color: #fff; height:300px">
 
     </div>
   </div>
-  <div style="background-color: #24bdf0;height: 895px;margin:auto">
+  <div style="background-color: #24bdf0;height: 895px;margin:auto;
+  
+  background-image: url('background/background-footer.png');
+  background-size: cover; /* para sakto sa container */
+  background-position: center; /* para naka-center */
+  ">
     <br>
     <br>
     <br>
@@ -738,7 +743,7 @@ color: #fff; height:300px">
 
       // apply transform depende sa progress
       left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress * 1}deg)`;
-      right.style.transform = `translateX(${progress * 160}px) rotate(${3 + progress * 1}deg)`;
+      right.style.transform = `translateX(${progress * 140}px) rotate(${3 + progress * 1}deg)`;
     });
   </script>
 
