@@ -156,7 +156,13 @@
       animation: detailsOpen 2s ease-in-out;
     }
 
+    .frequenlty-asked-questions {
+      background-image: url('background/background-text.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
+    }
 
     @keyframes detailsOpen {
       from {
@@ -337,6 +343,47 @@
     .nav-link.active:hover::after {
       width: 0;
     }
+
+    .info h4 {
+
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+
+    }
+
+    .info p {
+
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: white;
+
+    }
+
+    .card .info {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      padding: 8px;
+
+    }
+
+    .top-rated-specialist {
+      font-weight: 500;
+      font-family: 'Parkin Sans', sans-serif;
+      font-size: 12px;
+      color: #000080;
+      background-color: white;
+      width: 120px;
+      text-align: center;
+      border-radius: 16px;
+      position: relative;
+      top: 30px;
+      left: 30px;
+    }
   </style>
 </head>
 
@@ -392,11 +439,11 @@
 
   <!-- Hero Section -->
   <!-- <section class="py-5" style="background: linear-gradient(135deg, #00a28b, #0071ce); color: #fff; height:300px"> -->
-  <section " class=" py-5" style="background-image: url('banner/banner.png');background-size: cover; 
- color: #fff; height:300px">
+  <section style="background-image: url('banner/banner.png');background-size: cover; 
+color: #fff; height:300px">
 
     <div class="container text-center">
-      <br><br><br><br><br><br>
+      <br><br><br><br>
       <h1 style="background-color: rgba(255, 255, 255, 0.8); 
              color: #222; 
              font-weight: bold; 
@@ -424,170 +471,150 @@
   </section>
 
   <!-- Categories -->
-  <section class="py-5" style="max-width: 1000px;margin:auto">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="category-card button1" style="cursor: pointer;">
-            <div class="category-icon"><i class="bi bi-headset"></i></div>
-            <div>
-              <h5 class="mb-1">Customer Service</h5>
-              <p class="mb-0">Exceptional customer support.</p>
+
+  <div class="frequenlty-asked-questions">
+    <section class="py-5" style="max-width: 1000px;margin:auto;">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="category-card button1" style="cursor: pointer;">
+              <div class="category-icon"><i class="bi bi-headset"></i></div>
+              <div>
+                <h5 class="mb-1">Customer Service</h5>
+                <p class="mb-0">Exceptional customer support.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="category-card button2" style="cursor: pointer;">
+              <div class="category-icon"><i class="bi bi-lightbulb"></i></div>
+              <div>
+                <h5 class="mb-1">Entrepreneurship</h5>
+                <p class="mb-0">Creating and managing a business for profit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="category-card button3" style="cursor: pointer;">
+              <div class="category-icon"><i class="bi bi-people"></i></div>
+              <div>
+                <h5 class="mb-1">Business Management</h5>
+                <p class="mb-0">Overseeing resources and personnel efficiently.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="category-card button4" style="cursor: pointer;">
+              <div class="category-icon"><i class="bi bi-megaphone"></i></div>
+              <div>
+                <h5 class="mb-1">Marketing Strategies</h5>
+                <p class="mb-0">Promoting products to target audiences.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="category-card button5" style="cursor: pointer;">
+              <div class="category-icon"><i class="bi bi-cash-stack"></i></div>
+              <div>
+                <h5 class="mb-1">Financial Planning</h5>
+                <p class="mb-0">Managing finances for future growth.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="category-card button6" style="cursor: pointer;">
+              <div class="category-icon"><i class="bi bi-cart-check"></i></div>
+              <div>
+                <h5 class="mb-1">Sales Techniques</h5>
+                <p class="mb-0">Persuadin g customers to buy products.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="category-card button2" style="cursor: pointer;">
-            <div class="category-icon"><i class="bi bi-lightbulb"></i></div>
-            <div>
-              <h5 class="mb-1">Entrepreneurship</h5>
-              <p class="mb-0">Creating and managing a business for profit.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="category-card button3" style="cursor: pointer;">
-            <div class="category-icon"><i class="bi bi-people"></i></div>
-            <div>
-              <h5 class="mb-1">Business Management</h5>
-              <p class="mb-0">Overseeing resources and personnel efficiently.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="category-card button4" style="cursor: pointer;">
-            <div class="category-icon"><i class="bi bi-megaphone"></i></div>
-            <div>
-              <h5 class="mb-1">Marketing Strategies</h5>
-              <p class="mb-0">Promoting products to target audiences.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="category-card button5" style="cursor: pointer;">
-            <div class="category-icon"><i class="bi bi-cash-stack"></i></div>
-            <div>
-              <h5 class="mb-1">Financial Planning</h5>
-              <p class="mb-0">Managing finances for future growth.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="category-card button6" style="cursor: pointer;">
-            <div class="category-icon"><i class="bi bi-cart-check"></i></div>
-            <div>
-              <h5 class="mb-1">Sales Techniques</h5>
-              <p class="mb-0">Persuadin g customers to buy products.</p>
-            </div>
-          </div>
-        </div>
       </div>
+    </section>
+    <br><br>
+    <div style="text-align: center;">
+      <label data-aos="fade-up" for=""
+        style="background-color: #ccc;color:#0071ce;  border-radius:16px;width: 100px;text-align:center">Benefits</label>
+      <br><br>
+      <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+      <label data-aos="fade-up">Your outsourcing questions, answered.</label>
+      <br><br>
+    </div>
+    <div data-aos="fade-up" style="max-width: 1250px;margin:auto;margin-bottom:100px">
+
+      <details data-aos="fade-up" class="floating-btn">
+        <summary>How soon can I get started?</summary>
+        <p class="paragraph-details">Within a week. That's the average time it takes to get you up and running
+          outsourcing
+          to the Philippines... most clients are rolling within the first few days.</p>
+      </details>
+
+      <details data-aos="fade-up">
+        <summary>What happens if my Filipino hire suddenly stops showing up or quits unexpectedly?</summary>
+        <p class="paragraph-details">Our 6 month replacement guarantee has you covered in case this happens (which is
+          rare).</p>
+        <p class="paragraph-details">If your hire ghosts you or leaves suddenly, we'll replace them immediately at no
+          extra cost.</p>
+      </details>
+
+      <details data-aos="fade-up">
+        <summary>What's the real cost difference compared to hiring locally, and are there any hidden fees?</summary>
+        <p class="paragraph-details">You'll save 60–75% compared to equivalent Australian talent – a typical $90K
+          Australian role costs about $25–35K through us.</p>
+      </details>
+
+      <details data-aos="fade-up">
+        <summary>How do I communicate with my team?</summary>
+        <p class="paragraph-details">Communication is dead simple. Your team connects through your existing platforms:
+          Slack, Zoom, Microsoft, Google, or any tool in your stack.</p>
+      </details>
+      <details data-aos="fade-up">
+        <summary>How fast can I really get matched with Filipino talent... what happens if your "48-hour" promise
+          doesn’t
+          work out?</summary>
+        <p class="paragraph-details">Most matches happen within 48 hours, but complex roles might take up to a week. In
+          any case, we only present pre-vetted candidates.</p>
+      </details>
+
+      <details data-aos="fade-up">
+        <summary>Do I need to handle Filipino tax laws, payroll, or employment regulations myself?</summary>
+        <p class="paragraph-details">Absolutely not. Your Filipino team member is technically employed by us in the
+          Philippines, so you have ZERO administrative or legal headaches. You just pay one simple invoice.</p>
+      </details>
+
+      <details data-aos="fade-up">
+        <summary>What industries do you serve?</summary>
+        <p class="paragraph-details">Our outsourcing providers in Philippines have worked across industries like
+          construction, accounting, education, SaaS, and eCommerce. Chances are, we can support you too!</p>
+      </details>
+
+      <details data-aos="fade-up">
+        <summary>What about security & compliance?</summary>
+        <p class="paragraph-details">Our outsourcing company maintains ironclad privacy (fully compliant) across all
+          operations. Nothing stored onsite — we use Microsoft’s servers and services... same as you!</p>
+      </details>
 
     </div>
-  </section>
-  <br><br>
-  <div style="text-align: center;">
-    <label data-aos="fade-up" for=""
-      style="background-color: #ccc;color:#0071ce;  border-radius:16px;width: 100px;text-align:center">Benefits</label>
-    <br><br>
-    <h2 data-aos="fade-up">Frequently Asked Questions</h2>
-    <label data-aos="fade-up">Your outsourcing questions, answered.</label>
-    <br><br>
   </div>
-  <div data-aos="fade-up" style="max-width: 1250px;margin:auto;margin-bottom:100px">
-
-    <details data-aos="fade-up" class="floating-btn">
-      <summary>How soon can I get started?</summary>
-      <p class="paragraph-details">Within a week. That's the average time it takes to get you up and running outsourcing
-        to the Philippines... most clients are rolling within the first few days.</p>
-    </details>
-
-    <details data-aos="fade-up">
-      <summary>What happens if my Filipino hire suddenly stops showing up or quits unexpectedly?</summary>
-      <p class="paragraph-details">Our 6 month replacement guarantee has you covered in case this happens (which is
-        rare).</p>
-      <p class="paragraph-details">If your hire ghosts you or leaves suddenly, we'll replace them immediately at no
-        extra cost.</p>
-    </details>
-
-    <details data-aos="fade-up">
-      <summary>What's the real cost difference compared to hiring locally, and are there any hidden fees?</summary>
-      <p class="paragraph-details">You'll save 60–75% compared to equivalent Australian talent – a typical $90K
-        Australian role costs about $25–35K through us.</p>
-    </details>
-
-    <details data-aos="fade-up">
-      <summary>How do I communicate with my team?</summary>
-      <p class="paragraph-details">Communication is dead simple. Your team connects through your existing platforms:
-        Slack, Zoom, Microsoft, Google, or any tool in your stack.</p>
-    </details>
-    <details data-aos="fade-up">
-      <summary>How fast can I really get matched with Filipino talent... what happens if your "48-hour" promise doesn’t
-        work out?</summary>
-      <p class="paragraph-details">Most matches happen within 48 hours, but complex roles might take up to a week. In
-        any case, we only present pre-vetted candidates.</p>
-    </details>
-
-    <details data-aos="fade-up">
-      <summary>Do I need to handle Filipino tax laws, payroll, or employment regulations myself?</summary>
-      <p class="paragraph-details">Absolutely not. Your Filipino team member is technically employed by us in the
-        Philippines, so you have ZERO administrative or legal headaches. You just pay one simple invoice.</p>
-    </details>
-
-    <details data-aos="fade-up">
-      <summary>What industries do you serve?</summary>
-      <p class="paragraph-details">Our outsourcing providers in Philippines have worked across industries like
-        construction, accounting, education, SaaS, and eCommerce. Chances are, we can support you too!</p>
-    </details>
-
-    <details data-aos="fade-up">
-      <summary>What about security & compliance?</summary>
-      <p class="paragraph-details">Our outsourcing company maintains ironclad privacy (fully compliant) across all
-        operations. Nothing stored onsite — we use Microsoft’s servers and services... same as you!</p>
-    </details>
-
-  </div>
-  <div style="background-color: #24bdf0;height: 895px;width:100%">
+  <div style="background-color: #24bdf0;height: 895px;margin:auto">
     <br>
     <br>
     <br>
-    <div class="container" style="display:flex; flex-direction: column;align-items:center;justify-content:center;gap: 40px;">
-
+    <div class="container"
+      style="display:flex; flex-direction: column;align-items:center;justify-content:center;gap: 40px;">
       <style>
-        .custom-h2 {
-          color: #fff;
-          font-size: px;
-          line-height: 1.2;
-          font-family: 'Poppins', sans-serif;
-
-        }
-      </style>
-
-      <h2 class="custom-h2" style="font-weight:400;">Get started with Skill Cloud…</h2>
-      <h2 class="custom-h2" style="font-weight:800;">Your workforce multiplier™!</h2>
-      <h2 class="custom-h2" style="font-weight:600;">Discover a smarter</h2>
-      <h2 class="custom-h2" style="margin:-50px;font-weight:600;color:#001f3f;">faster way to hire.</h2><br>
-      <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
-        <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
-        Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
-      </label>
-      <style>
-        .image-card {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-       
-        }
-
         .cards {
           display: flex;
-          align-items: center;
-          gap: 20px;
+
+          align-items: flex-end;
           position: relative;
         }
 
@@ -598,81 +625,74 @@
           width: 230px;
           height: 310px;
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-          transition: transform 0.3s ease, z-index 0.3s ease;
+          transition: transform 0.6s ease;
         }
 
-        .card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
 
-        /* Info text inside card */
-        .info {
-          position: absolute;
-          bottom: 15px;
-          left: 15px;
-          color: #fff;
-          font-family: sans-serif;
-        }
 
-        .info h4 {
-          margin: 0;
-          font-size: 16px;
-          font-weight: bold;
-        }
-
-        .info p {
-          margin: 2px 0 0;
-          font-size: 12px;
-        }
-
-        /* Badge */
-        .badge {
-          position: absolute;
-          top: 12px;
-          left: 12px;
-          background: white;
-          color: #333;
-          font-size: 12px;
-          padding: 4px 8px;
-          border-radius: 12px;
-          font-weight: 500;
-        }
-
-        /* Left tilt */
+        /* Initial state: closed */
         .card.left {
-          transform: rotate(-5deg) translateY(20px);
+
           z-index: 1;
+          margin-right: -150px;
+          height: 270px;
+          width: 270px;
+
         }
 
-        /* Center card bigger & front */
         .card.center {
-          width: 285px;
-          height: 380px;
+
+          height: 320px;
+          width: 320px;
           z-index: 2;
         }
 
-        /* Right tilt */
         .card.right {
-          transform: rotate(5deg) translateY(20px);
+          transform: translateX(0px) rotate(8deg);
           z-index: 1;
+          height: 350px;
+          width: 300px;
+          margin-left: -150px;
         }
+
+        /* Open state (when scrolled down) */
       </style>
+
+      <h2 class="custom-h2" style="font-weight:400;color:white;font-family:  'Poppins', sans-serif">Get started with Skill Cloud…</h2>
+      <h2 class="custom-h2" style="font-weight:800;color:white;font-family:  'Poppins', sans-serif">Your workforce multiplier™!</h2>
+      <h2 class="custom-h2" style="font-weight:600;color:white;font-family:  'Poppins', sans-serif">Discover a smarter</h2>
+      <h2 class="custom-h2" style="margin:-50px;font-weight:600;color:#001f3f;">faster way to hire.</h2><br>
+      <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+        <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
+        Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
+      </label>
+
       <div class="image-card">
         <div class="cards">
           <!-- Left Card -->
-          <div class="card left">
-            <img src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/67d092d443c5252a04041cab_Men%202.avif" alt="">
+          <div class="card left"
+            style="
+            background-image: url('image/footer/left-image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;">
+
             <div class="info">
               <h4>Jacob Galang</h4>
               <p>Social Media Manager</p>
             </div>
+
           </div>
 
           <!-- Center Card -->
-          <div class="card center">
-            <img src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/67d0960a606a8f3b733306af_3.avif" alt="">
+          <div class="card center" style="
+            background-image: url('image/footer/center-image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;">
+            <label class="top-rated-specialist"
+
+              for="">Top rated specialist</label>
             <div class="info">
               <h4>Hailey Nicolas</h4>
               <p>Marketing Operations Manager</p>
@@ -680,8 +700,12 @@
           </div>
 
           <!-- Right Card -->
-          <div class="card right">
-            <img src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/67d0ad27333d243098a7359a_4.avif" alt="">
+          <div class="card right" style="
+            background-image: url('image/footer/right-image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;">
+
             <div class="info">
               <h4>Sanine Villarin</h4>
               <p>Marketing Specialist</p>
@@ -692,10 +716,38 @@
 
     </div>
   </div>
-  <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;margin-top:50px;" id="footer" class="footer light-background">
+
+
+
+
+
+  <script>
+    window.addEventListener("scroll", function() {
+      const cards = document.querySelector(".cards");
+      const rect = cards.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // kalkulahin kung gaano kalaki ang nakikita sa screen
+      let visible = 1 - Math.abs(rect.top + rect.height / 2 - windowHeight / 2) / (windowHeight / 2);
+
+      // limit 0 - 1
+      let progress = Math.min(Math.max(visible, 0), 1);
+
+      const left = document.querySelector(".card.left");
+      const right = document.querySelector(".card.right");
+
+      // apply transform depende sa progress
+      left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress * 1}deg)`;
+      right.style.transform = `translateX(${progress * 160}px) rotate(${3 + progress * 1}deg)`;
+    });
+  </script>
+
+  <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;margin-top:50px;" id="footer"
+    class="footer light-background">
 
     <div class="footer-container">
-      <section data-aos="fade-up" data-aos-delay="0" class="footer-col" style="max-width: 99px;" aria-labelledby="nav-title">
+      <section data-aos="fade-up" data-aos-delay="0" class="footer-col" style="max-width: 99px;"
+        aria-labelledby="nav-title">
         <label id="nav-title">Navigate</label>
         <ul>
           <li>Home</li>
@@ -707,7 +759,8 @@
         </ul>
       </section>
 
-      <section data-aos="fade-up" data-aos-delay="200" class="footer-col" style="max-width: 92px;" aria-labelledby="follow-title">
+      <section data-aos="fade-up" data-aos-delay="200" class="footer-col" style="max-width: 92px;"
+        aria-labelledby="follow-title">
         <h4 id="follow-title">Follow</h4>
         <ul>
           <li>Instagram</li>
@@ -718,7 +771,8 @@
         </ul>
       </section>
 
-      <section data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;" aria-labelledby="contact-title">
+      <section data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;"
+        aria-labelledby="contact-title">
         <h4 id="contact-title">Contact</h4>
         <ul>
           <li>Call Us: +(+61) 7 2146 9086</li>
@@ -727,7 +781,8 @@
         </ul>
       </section>
 
-      <section data-aos="fade-up" data-aos-delay="600" class="footer-col" style="max-width: 181px;" aria-labelledby="visit-title">
+      <section data-aos="fade-up" data-aos-delay="600" class="footer-col" style="max-width: 181px;"
+        aria-labelledby="visit-title">
         <h4 id="visit-title">Visit</h4>
         <ul>
           <li>Philippines:<br />
@@ -784,6 +839,7 @@
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
+    /*fadeup - down*/
     document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
         AOS.init({
