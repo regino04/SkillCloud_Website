@@ -1,0 +1,251 @@
+details {
+
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    /* New font */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+
+
+  }
+
+  details[open] summary~* {
+    animation: detailsOpen 2s ease-in-out;
+  }
+
+
+
+  @keyframes detailsOpen {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+
+
+  /* Remove default arrow */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  /* Custom arrow pointing down */
+  summary::after {
+    content: "▼";
+    /* down arrow */
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate arrow up when open */
+  details[open] summary::after {
+    transform: rotate(180deg);
+  }
+
+
+  .category-card {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* height: 450px; */
+    /* width: 400px; */
+
+  }
+
+
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .frequenlty-asked-questions {
+    background-image: url('background/background-text.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
+  .button1 {
+    border-color: #00a28b;
+  }
+
+  .button1:hover {
+    background-color: #00a28b;
+    /* kapareho ng category-icon */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    color: #fff;
+    /* para readable ang text */
+  }
+
+  .button1 .category-icon {
+    background-color: #00a28b;
+  }
+
+  .button2 {
+    border-color: #0071ce;
+  }
+
+  .button2:hover {
+    background-color: #0071ce;
+    /* kapareho ng category-icon */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    color: #fff;
+    /* para readable ang text */
+  }
+
+  .button2 .category-icon {
+    background-color: #0071ce;
+  }
+
+  .button3 {
+    border-color: #00b2b2;
+  }
+
+  .button3:hover {
+    background-color: #00b2b2;
+    /* kapareho ng category-icon */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    color: #fff;
+    /* para readable ang text */
+  }
+
+  .button3 .category-icon {
+    background-color: #00b2b2;
+  }
+
+  .button4 {
+    border-color: #d1422f;
+  }
+
+  .button4:hover {
+    background-color: #d1422f;
+    /* kapareho ng category-icon */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    color: #fff;
+    /* para readable ang text */
+  }
+
+  .button4 .category-icon {
+    background-color: #d1422f;
+  }
+
+  .button5 {
+    border-color: #7a2c87;
+  }
+
+  .button5:hover {
+    background-color: #7a2c87;
+    /* kapareho ng category-icon */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    color: #fff;
+    /* para readable ang text */
+  }
+
+  .button5 .category-icon {
+    background-color: #7a2c87;
+  }
+
+  .button6 {
+    border-color: #b33a9b;
+  }
+
+  .button6:hover {
+    background-color: #b33a9b;
+    /* kapareho ng category-icon */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    color: #fff;
+    /* para readable ang text */
+  }
+
+  .button6 .category-icon {
+    background-color: #b33a9b;
+  }
+
+
+.other-questions {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.other-questions .form-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  
+}
+
+.other-questions label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 16px;
+  display: block;
+}
+
+.other-questions .form-control,
+.other-questions .form-select {
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 55px; /* para pantay lahat ng inputs at select */
+}
+
+.other-questions textarea.form-control {
+  resize: vertical;
+  min-height: 120px; /* mas mataas para sa message box */
+  height: auto; /* override fixed height */
+}
+
+.other-questions .form-control:focus,
+.other-questions .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.4);
+  outline: none;
+}
+
+.other-questions button {
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 8px;
+}

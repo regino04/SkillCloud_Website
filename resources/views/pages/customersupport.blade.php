@@ -2,209 +2,9 @@
 
 @section('content')
 
-<style>
-  details {
 
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    /* New font */
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+<link rel="stylesheet" href="{{ asset('css/customersupport.css') }}">
 
-
-  }
-
-  details[open] summary~* {
-    animation: detailsOpen 2s ease-in-out;
-  }
-
-
-
-  @keyframes detailsOpen {
-    from {
-      opacity: 0;
-      transform: translateY(-5px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-summary {
-      cursor: pointer;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-
-
-    /* Remove default arrow */
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::marker {
-      display: none;
-    }
-
-    /* Custom arrow pointing down */
-    summary::after {
-      content: "▼";
-      /* down arrow */
-      transition: transform 0.3s ease;
-    }
-
-    /* Rotate arrow up when open */
-    details[open] summary::after {
-      transform: rotate(180deg);
-    }
-
-
-  .category-card {
-    border: 2px solid transparent;
-    border-radius: 10px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    /* height: 450px; */
-    /* width: 400px; */
-
-  }
-
-
-  .category-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.5rem;
-  }
-
-  .frequenlty-asked-questions {
-    background-image: url('background/background-text.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-  }
-
-  .button1 {
-    border-color: #00a28b;
-  }
-
-  .button1:hover {
-    background-color: #00a28b;
-    /* kapareho ng category-icon */
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
-    color: #fff;
-    /* para readable ang text */
-  }
-
-  .button1 .category-icon {
-    background-color: #00a28b;
-  }
-
-  .button2 {
-    border-color: #0071ce;
-  }
-
-  .button2:hover {
-    background-color: #0071ce;
-    /* kapareho ng category-icon */
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
-    color: #fff;
-    /* para readable ang text */
-  }
-
-  .button2 .category-icon {
-    background-color: #0071ce;
-  }
-
-  .button3 {
-    border-color: #00b2b2;
-  }
-
-  .button3:hover {
-    background-color: #00b2b2;
-    /* kapareho ng category-icon */
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
-    color: #fff;
-    /* para readable ang text */
-  }
-
-  .button3 .category-icon {
-    background-color: #00b2b2;
-  }
-
-  .button4 {
-    border-color: #d1422f;
-  }
-
-  .button4:hover {
-    background-color: #d1422f;
-    /* kapareho ng category-icon */
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
-    color: #fff;
-    /* para readable ang text */
-  }
-
-  .button4 .category-icon {
-    background-color: #d1422f;
-  }
-
-  .button5 {
-    border-color: #7a2c87;
-  }
-
-  .button5:hover {
-    background-color: #7a2c87;
-    /* kapareho ng category-icon */
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
-    color: #fff;
-    /* para readable ang text */
-  }
-
-  .button5 .category-icon {
-    background-color: #7a2c87;
-  }
-
-  .button6 {
-    border-color: #b33a9b;
-  }
-
-  .button6:hover {
-    background-color: #b33a9b;
-    /* kapareho ng category-icon */
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
-    color: #fff;
-    /* para readable ang text */
-  }
-
-  .button6 .category-icon {
-    background-color: #b33a9b;
-  }
-</style>
 <section style="background-image: url('banner/banner.png');background-size: cover; color: #fff; height:300px">
 
   <div class="container text-center">
@@ -369,41 +169,87 @@ summary {
 
   </div>
 </div>
+<div class="container my-5">
+  <div class="other-questions p-5 rounded shadow-lg bg-white">
+    <h3 class="form-title">Any Other Questions?</h3>
+
+    <form>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" id="name" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" id="email" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="text" id="phone" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label for="company" class="form-label">Company</label>
+          <input type="text" id="company" class="form-control">
+        </div>
+        <div class="col-md-12">
+          <label for="department" class="form-label">Choose Department</label>
+             <select id="department" class="form-select">
+          <option value="">Select Department</option>
+          <option value="it">I.T.</option>
+          <option value="hr">H.R.</option>
+          <option value="design">Design</option>
+          <option value="marketing">Marketing</option>
+          <option value="finance">Finance</option>
+        </select>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">How can we help you?</label>
+          <textarea id="message" class="form-control"></textarea>
+        </div>
+        <div class="col-12 text-end">
+          <button type="submit" class="btn btn-primary px-4">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
 
 
 <script>
-    document.querySelectorAll("details").forEach((targetDetail) => {
-      targetDetail.addEventListener("toggle", () => {
-        if (targetDetail.open) {
-          document.querySelectorAll("details").forEach((detail) => {
-            if (detail !== targetDetail) {
-              detail.open = false; // close other details
-            }
-          });
-        }
-      });
+  document.querySelectorAll("details").forEach((targetDetail) => {
+    targetDetail.addEventListener("toggle", () => {
+      if (targetDetail.open) {
+        document.querySelectorAll("details").forEach((detail) => {
+          if (detail !== targetDetail) {
+            detail.open = false; // close other details
+          }
+        });
+      }
     });
-    document.querySelectorAll("details").forEach((el) => {
-      el.addEventListener("toggle", function() {
-        if (this.open) {
-          let content = this.querySelectorAll(".paragraph-details");
-          this.style.overflow = "hidden";
-          this.animate(
-            [{
-                height: "0px",
-                opacity: 0
-              },
-              {
-                height: this.scrollHeight + "px",
-                opacity: 1
-              }
-            ], {
-              duration: 300,
-              easing: "ease"
+  });
+  document.querySelectorAll("details").forEach((el) => {
+    el.addEventListener("toggle", function() {
+      if (this.open) {
+        let content = this.querySelectorAll(".paragraph-details");
+        this.style.overflow = "hidden";
+        this.animate(
+          [{
+              height: "0px",
+              opacity: 0
+            },
+            {
+              height: this.scrollHeight + "px",
+              opacity: 1
             }
-          );
-        }
-      });
+          ], {
+            duration: 300,
+            easing: "ease"
+          }
+        );
+      }
     });
-  </script>
+  });
+</script>
 @endsection

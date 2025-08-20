@@ -11,17 +11,12 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-  
-
-
-
-
     /* Category colors */
-   
-    
 
 
-    
+
+
+
     .footer-container {
       display: flex;
       justify-content: space-between;
@@ -249,231 +244,247 @@
     </div>
   </nav>
 
-  
+
   <main class="main">
-          </div>
+    </div>
 
     {{-- main --}}
     @yield('content')
 
 
-  <div style="background-color: #24bdf0;height: 895px;margin:auto;
+    <div style="background-color: #24bdf0;height: 895px;margin:auto;
   
   background-image: url('background/background-footer.png');
   background-size: cover; /* para sakto sa container */
   background-position: center; /* para naka-center */
   ">
-    <br>
-    <br>
-    <br>
-    <div class="container"
-      style="display:flex; flex-direction: column;align-items:center;justify-content:center;gap: 40px;">
-      <style>
-        .cards {
-          display: flex;
+      <br>
+      <br>
+      <br>
+      <div class="container"
+        style="display:flex; flex-direction: column;align-items:center;justify-content:center;gap: 40px;">
+        <style>
+          .cards {
+            display: flex;
 
-          align-items: flex-end;
-          position: relative;
-        }
+            align-items: flex-end;
+            position: relative;
+          }
 
-        .card {
-          position: relative;
-          border-radius: 14px;
-          overflow: hidden;
-          width: 230px;
-          height: 310px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-          transition: transform 0.6s ease;
-        }
+          .card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            width: 230px;
+            height: 310px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.6s ease;
+          }
 
 
 
-        /* Initial state: closed */
-        .card.left {
+          /* Initial state: closed */
+          .card.left {
 
-          z-index: 1;
-          margin-right: -150px;
-          height: 270px;
-          width: 270px;
+            z-index: 1;
+            margin-right: -150px;
+            height: 270px;
+            width: 270px;
 
-        }
+          }
 
-        .card.center {
+          .card.center {
 
-          height: 320px;
-          width: 320px;
-          z-index: 2;
-        }
+            height: 320px;
+            width: 320px;
+            z-index: 2;
+          }
 
-        .card.right {
-          transform: translateX(0px) rotate(8deg);
-          z-index: 1;
-          height: 350px;
-          width: 300px;
-          margin-left: -150px;
-        }
+          .card.right {
+            transform: translateX(0px) rotate(8deg);
+            z-index: 1;
+            height: 350px;
+            width: 300px;
+            margin-left: -150px;
+          }
 
-        /* Open state (when scrolled down) */
-      </style>
+          /* Open state (when scrolled down) */
+        </style>
 
-      <h2 class="custom-h2" style="font-weight:400;color:white;font-family:  'Poppins', sans-serif">Get started with Skill Cloud…</h2>
-      <h2 class="custom-h2" style="font-weight:800;color:white;font-family:  'Poppins', sans-serif">Your workforce multiplier™!</h2>
-      <h2 class="custom-h2" style="font-weight:600;color:white;font-family:  'Poppins', sans-serif">Discover a smarter</h2>
-      <h2 class="custom-h2" style="margin:-50px;font-weight:600;color:#001f3f;">faster way to hire.</h2><br>
-      <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
-        <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
-        Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
-      </label>
+        <h2 class="custom-h2" style="font-weight:400;color:white;font-family:  'Poppins', sans-serif">Get started with Skill Cloud…</h2>
+        <h2 class="custom-h2" style="font-weight:800;color:white;font-family:  'Poppins', sans-serif">Your workforce multiplier™!</h2>
+        <h2 class="custom-h2" style="font-weight:600;color:white;font-family:  'Poppins', sans-serif">Discover a smarter</h2>
+        <h2 class="custom-h2" style="margin:-50px;font-weight:600;color:#001f3f;">faster way to hire.</h2><br>
+        <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+          <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
+          Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
+        </label>
 
-      <div class="image-card">
-        <div class="cards">
-          <!-- Left Card -->
-          <div class="card left"
-            style="
+        <div class="image-card">
+          <div class="cards">
+            <!-- Left Card -->
+            <div class="card left"
+              style="
             background-image: url('image/footer/left-image.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;">
 
-            <div class="info">
-              <h4>Jacob Galang</h4>
-              <p>Social Media Manager</p>
+              <div class="info">
+                <h4>Jacob Galang</h4>
+                <p>Social Media Manager</p>
+              </div>
+
             </div>
 
-          </div>
-
-          <!-- Center Card -->
-          <div class="card center" style="
+            <!-- Center Card -->
+            <div class="card center" style="
             background-image: url('image/footer/center-image.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;">
-            <label class="top-rated-specialist"
+              <label class="top-rated-specialist"
 
-              for="">Top rated specialist</label>
-            <div class="info">
-              <h4>Hailey Nicolas</h4>
-              <p>Marketing Operations Manager</p>
+                for="">Top rated specialist</label>
+              <div class="info">
+                <h4>Hailey Nicolas</h4>
+                <p>Marketing Operations Manager</p>
+              </div>
             </div>
-          </div>
 
-          <!-- Right Card -->
-          <div class="card right" style="
+            <!-- Right Card -->
+            <div class="card right" style="
             background-image: url('image/footer/right-image.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;">
 
-            <div class="info">
-              <h4>Sanine Villarin</h4>
-              <p>Marketing Specialist</p>
+              <div class="info">
+                <h4>Sanine Villarin</h4>
+                <p>Marketing Specialist</p>
+              </div>
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+      window.addEventListener("scroll", function() {
+        const cards = document.querySelector(".cards");
+        const rect = cards.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // kalkulahin kung gaano kalaki ang nakikita sa screen
+        let visible = 1 - Math.abs(rect.top + rect.height / 2 - windowHeight / 2) / (windowHeight / 2);
+
+        // limit 0 - 1
+        let progress = Math.min(Math.max(visible, 0), 1);
+
+        const left = document.querySelector(".card.left");
+        const right = document.querySelector(".card.right");
+
+        // apply transform depende sa progress
+        left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress * 1}deg)`;
+        right.style.transform = `translateX(${progress * 140}px) rotate(${3 + progress * 1}deg)`;
+      });
+    </script>
+
+    <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;margin-top:50px;" id="footer"
+      class="footer light-background">
+
+      <div class="footer-container">
+        <section data-aos="fade-up" data-aos-delay="0" class="footer-col" style="max-width: 99px;"
+          aria-labelledby="nav-title">
+          <label id="nav-title">Navigate</label>
+          <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Our team</li>
+            <li>Services</li>
+            <li>Pricing</li>
+            <li>Testimonials</li>
+          </ul>
+        </section>
+
+        <section data-aos="fade-up" data-aos-delay="200" class="footer-col" style="max-width: 92px;"
+          aria-labelledby="follow-title">
+          <h4 id="follow-title">Follow</h4>
+          <ul>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Linkedin</li>
+            <li>YouTube</li>
+            <li>X</li>
+          </ul>
+        </section>
+
+        <section data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;"
+          aria-labelledby="contact-title">
+          <h4 id="contact-title">Contact</h4>
+          <ul>
+            <li>Call Us: +(+61) 7 2146 9086</li>
+            <li>Email Us: hi@skillcloud.au</li>
+            <li>Customer Support</li>
+          </ul>
+        </section>
+
+        <section data-aos="fade-up" data-aos-delay="600" class="footer-col" style="max-width: 181px;"
+          aria-labelledby="visit-title">
+          <h4 id="visit-title">Visit</h4>
+          <ul>
+            <li>Philippines:<br />
+              Suite 4022, 168 Golden Rock Bldg. Salcedo St Makati City PH
+            </li>
+            <li>Australia:<br />
+              2/290 Boundary Street<br />
+              Spring Hill, Brisbane<br />
+              4000 Queensland, Australia
+            </li>
+          </ul>
+        </section>
       </div>
 
-    </div>
-  </div>
+    </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      /*fadeup - down*/
+      document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          AOS.init({
+            duration: 1500,
+            once: true,
+            offset: 0
+          });
+        }, 300);
+      });
+    </script>
 
-
-  <script>
-    window.addEventListener("scroll", function() {
-      const cards = document.querySelector(".cards");
-      const rect = cards.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // kalkulahin kung gaano kalaki ang nakikita sa screen
-      let visible = 1 - Math.abs(rect.top + rect.height / 2 - windowHeight / 2) / (windowHeight / 2);
-
-      // limit 0 - 1
-      let progress = Math.min(Math.max(visible, 0), 1);
-
-      const left = document.querySelector(".card.left");
-      const right = document.querySelector(".card.right");
-
-      // apply transform depende sa progress
-      left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress * 1}deg)`;
-      right.style.transform = `translateX(${progress * 140}px) rotate(${3 + progress * 1}deg)`;
-    });
-  </script>
-
-  <footer style="max-width: 1241px;margin:auto;margin-bottom:50px;margin-top:50px;" id="footer"
-    class="footer light-background">
-
-    <div class="footer-container">
-      <section data-aos="fade-up" data-aos-delay="0" class="footer-col" style="max-width: 99px;"
-        aria-labelledby="nav-title">
-        <label id="nav-title">Navigate</label>
-        <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Our team</li>
-          <li>Services</li>
-          <li>Pricing</li>
-          <li>Testimonials</li>
-        </ul>
-      </section>
-
-      <section data-aos="fade-up" data-aos-delay="200" class="footer-col" style="max-width: 92px;"
-        aria-labelledby="follow-title">
-        <h4 id="follow-title">Follow</h4>
-        <ul>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>Linkedin</li>
-          <li>YouTube</li>
-          <li>X</li>
-        </ul>
-      </section>
-
-      <section data-aos="fade-up" data-aos-delay="400" class="footer-col" style="max-width: 181px;"
-        aria-labelledby="contact-title">
-        <h4 id="contact-title">Contact</h4>
-        <ul>
-          <li>Call Us: +(+61) 7 2146 9086</li>
-          <li>Email Us: hi@skillcloud.au</li>
-          <li>Customer Support</li>
-        </ul>
-      </section>
-
-      <section data-aos="fade-up" data-aos-delay="600" class="footer-col" style="max-width: 181px;"
-        aria-labelledby="visit-title">
-        <h4 id="visit-title">Visit</h4>
-        <ul>
-          <li>Philippines:<br />
-            Suite 4022, 168 Golden Rock Bldg. Salcedo St Makati City PH
-          </li>
-          <li>Australia:<br />
-            2/290 Boundary Street<br />
-            Spring Hill, Brisbane<br />
-            4000 Queensland, Australia
-          </li>
-        </ul>
-      </section>
-    </div>
-
-  </footer>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    /*fadeup - down*/
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(function() {
-        AOS.init({
-          duration: 1500,
-          once: true,
-          offset: 0
-        });
-      }, 300);
-    });
-  </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function() {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68a563f16bf461191e5ce29a/1j330spr8';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
