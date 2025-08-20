@@ -20,6 +20,8 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      /* height: 450px; */
+      /* width: 400px; */
 
     }
 
@@ -183,7 +185,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 20px;
     }
 
@@ -473,7 +475,7 @@ color: #fff; height:300px">
   <!-- Categories -->
 
   <div class="frequenlty-asked-questions">
-    <section class="py-5" style="max-width: 1000px;margin:auto;">
+    <section class="py-5" style="max-width: 900px;margin:auto;">
       <div class="container">
         <div class="row g-4">
           <div class="col-md-6" data-aos="fade-left">
@@ -548,7 +550,7 @@ color: #fff; height:300px">
       <label data-aos="fade-up">Your outsourcing questions, answered.</label>
       <br><br>
     </div>
-    <div data-aos="fade-up" style="max-width: 1250px;margin:auto;margin-bottom:100px">
+    <div data-aos="fade-up" style="max-width: 1300px;margin:auto;margin-bottom:100px">
 
       <details data-aos="fade-up" class="floating-btn">
         <summary>How soon can I get started?</summary>
