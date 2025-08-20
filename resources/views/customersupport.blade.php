@@ -475,7 +475,7 @@ color: #fff; height:300px">
   <!-- Categories -->
 
   <div class="frequenlty-asked-questions">
-    <section class="py-5" style="max-width: 500px;margin:auto;">
+    <section class="py-5" style="max-width: 940px;margin:auto;">
       <div class="container">
         <div class="row g-4">
           <div class="col-md-6" data-aos="fade-left">

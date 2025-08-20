@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    // return view('pages.home');
-    return view('customersupport');
+
+    return view('pages.customersupport');
+    // return view('layout2');
+
 
 });
 Route::get('/1', function () {
