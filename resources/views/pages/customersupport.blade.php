@@ -13,18 +13,7 @@
                  height: 300px; overflow-x: hidden;">
   <div class="container text-center">
     <br><br><br><br><br><br>
-    <h1 style="background-color: rgba(255, 255, 255, 0.8); 
-             color: #222; 
-             font-weight: bold; 
-             font-size: 28px; 
-             width: 450px; 
-             height: 80px;  
-             display: flex; 
-             justify-content: center; 
-             align-items: center; 
-             text-align: center; 
-             margin: auto;
-             border-radius: 8px;">
+    <h1 class="tittle">
       How can we help you?
     </h1> <br>
 

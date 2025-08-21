@@ -6,6 +6,7 @@ Route::get('/', function () {
 
     return view('pages.customersupport');
     // return view('layout2');
+    // return view('layout.mainmain');
 
 
 });
