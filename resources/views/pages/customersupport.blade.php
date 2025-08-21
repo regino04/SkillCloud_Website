@@ -5,8 +5,12 @@
 
 <link rel="stylesheet" href="{{ asset('css/customersupport.css') }}">
 
-<section style="background-image: url('banner/banner.png');background-size: cover; color: #fff; height:300px">
-
+<section style="background-image: url('banner/banner.png'); 
+           
+                 background-repeat: no-repeat; 
+                 background-position: center; 
+                 color: #fff; 
+                 height: 300px; overflow-x: hidden;">
   <div class="container text-center">
     <br><br><br><br><br><br>
     <h1 style="background-color: rgba(255, 255, 255, 0.8); 

@@ -382,16 +382,20 @@
 
         // kalkulahin kung gaano kalaki ang nakikita sa screen
         let visible = 1 - Math.abs(rect.top + rect.height / 2 - windowHeight / 2) / (windowHeight / 2);
-
-        // limit 0 - 1
         let progress = Math.min(Math.max(visible, 0), 1);
 
         const left = document.querySelector(".card.left");
         const right = document.querySelector(".card.right");
 
-        // apply transform depende sa progress
-        left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress * 1}deg)`;
-        right.style.transform = `translateX(${progress * 140}px) rotate(${3 + progress * 1}deg)`;
+        if (rect.top <= windowHeight / 2) {
+          // kapag lumagpas na sa kalahati ng screen pataas → lock sa final form
+          left.style.transform = `translateX(${-140}px) rotate(${-4}deg)`;
+          right.style.transform = `translateX(${140}px) rotate(${4}deg)`;
+        } else {
+          // nasa baba pa ng kalahati → normal animation
+          left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress}deg)`;
+          right.style.transform = `translateX(${progress * 140}px) rotate(${3 + progress}deg)`;
+        }
       });
     </script>
 
@@ -470,6 +474,8 @@
       });
     </script>
 
+
+    <!-- widgettalkto -->
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
