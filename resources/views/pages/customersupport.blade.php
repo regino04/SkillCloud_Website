@@ -186,14 +186,14 @@
         </div>
         <div class="col-md-12">
           <label for="department" class="form-label">Choose Department</label>
-             <select id="department" class="form-select">
-          <option value="">Select Department</option>
-          <option value="it">I.T.</option>
-          <option value="hr">H.R.</option>
-          <option value="design">Design</option>
-          <option value="marketing">Marketing</option>
-          <option value="finance">Finance</option>
-        </select>
+          <select id="department" class="form-select">
+            <option value="">Select Department</option>
+            <option value="it">I.T.</option>
+            <option value="hr">H.R.</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+            <option value="finance">Finance</option>
+          </select>
         </div>
         <div class="col-12">
           <label for="message" class="form-label">How can we help you?</label>

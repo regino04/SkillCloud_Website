@@ -14,7 +14,16 @@
     /* Category colors */
 
 
+    .container-card-footer {
+      background-color: #24bdf0;
+      height: 895px;
+      margin: auto;
 
+      background-image: url('background/background-footer.png');
+      background-size: cover;
+      background-position: center;
+
+    }
 
 
     .footer-container {
@@ -178,6 +187,60 @@
 
     }
 
+    .container.card-image {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .cards {
+      display: flex;
+
+      align-items: flex-end;
+      position: relative;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      width: 230px;
+      height: 310px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.6s ease;
+    }
+
+
+
+    /* Initial state: closed */
+    .card.left {
+
+      z-index: 1;
+      margin-right: -150px;
+      height: 270px;
+      width: 270px;
+
+    }
+
+    .card.center {
+
+      height: 320px;
+      width: 320px;
+      z-index: 2;
+    }
+
+    .card.right {
+      transform: translateX(0px) rotate(8deg);
+      z-index: 1;
+      height: 350px;
+      width: 300px;
+      margin-left: -150px;
+    }
+
+
     .top-rated-specialist {
       font-weight: 500;
       font-family: 'Parkin Sans', sans-serif;
@@ -199,17 +262,31 @@
       padding: 0;
       width: 100%;
       max-width: 100%;
-      overflow-x: hidden;
+      
       /* alisin horizontal scroll */
     }
 
     @media (max-width: 768px) {
 
+      
+      .container-card-footer {
+        height: 750px;
+
+
+
+      }
+
+
+
       /* Navbar items stack vertically */
       .navbar-nav {
         flex-direction: column !important;
         gap: 10px;
-        text-align: center;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        height: 100vh;
+        margin-top: 20px;
+        margin-left: 10px;
       }
 
       /* Buttons full-width */
@@ -236,14 +313,83 @@
       /* Card section stack */
 
 
+      .container.card-image {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+      }
+
+
+
       .card {
 
-       max-width: 130px;
-        max-height: 220px;
+
+        margin-top: 50px;
       }
-      .card .center{
-        max-width: 200px;
-        max-height: 240px;
+
+      .card.center {
+        max-width: 180px;
+        max-height: 270px;
+
+      }
+
+      .card.left {
+
+        z-index: 1;
+        margin-right: -150px;
+        max-width: 120px;
+        max-height: 180px;
+
+
+      }
+
+      .card.right {
+        transform: translateX(0px) rotate(8deg);
+        z-index: 1;
+        max-width: 120px;
+        max-height: 180px;
+
+        margin-left: -150px;
+      }
+
+      .top-rated-specialist {
+        font-weight: 500;
+        font-family: 'Parkin Sans', sans-serif;
+        font-size: 12px;
+        color: #000080;
+        background-color: white;
+        width: 120px;
+        text-align: center;
+        border-radius: 16px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+
+      .info h4 {
+
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 8px;
+        color: white;
+        width: auto;
+        margin-left: -15px;
+        margin-bottom: -1px;
+      }
+
+      .info p {
+
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 8px;
+        width: 200px;
+        color: white;
+        margin-left: -15px;
+        margin-bottom: -10px;
+
       }
 
       /* Text adjustments */
@@ -315,64 +461,13 @@
   @yield('content')
 
 
-  <div style="background-color: #24bdf0;height: 895px;margin:auto;
-  
-  background-image: url('background/background-footer.png');
-  background-size: cover; /* para sakto sa container */
-  background-position: center; /* para naka-center */
-  ">
+  <div class="container-card-footer">
     <br>
     <br>
     <br>
-    <div class="container"
-      style="display:flex; flex-direction: column;align-items:center;justify-content:center;gap: 40px;">
-      <style>
-        .cards {
-          display: flex;
-
-          align-items: flex-end;
-          position: relative;
-        }
-
-        .card {
-          position: relative;
-          border-radius: 14px;
-          overflow: hidden;
-          width: 230px;
-          height: 310px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-          transition: transform 0.6s ease;
-        }
+    <div class="container card-image">
 
 
-
-        /* Initial state: closed */
-        .card.left {
-
-          z-index: 1;
-          margin-right: -150px;
-          height: 270px;
-          width: 270px;
-
-        }
-
-        .card.center {
-
-          height: 320px;
-          width: 320px;
-          z-index: 2;
-        }
-
-        .card.right {
-          transform: translateX(0px) rotate(8deg);
-          z-index: 1;
-          height: 350px;
-          width: 300px;
-          margin-left: -150px;
-        }
-
-        /* Open state (when scrolled down) */
-      </style>
 
       <h2 class="custom-h2" style="font-weight:400;color:white;font-family:  'Poppins', sans-serif">Get started with Skill Cloud…</h2>
       <h2 class="custom-h2" style="font-weight:800;color:white;font-family:  'Poppins', sans-serif">Your workforce multiplier™!</h2>
@@ -423,7 +518,7 @@
             background-repeat: no-repeat;">
 
             <div class="info">
-              <h4>Sanine Villarin</h4>
+              <h4>Ysanne Villarin</h4>
               <p>Marketing Specialist</p>
             </div>
           </div>
@@ -452,8 +547,8 @@
 
       if (rect.top <= windowHeight / 2) {
         // kapag lumagpas na sa kalahati ng screen pataas → lock sa final form
-        left.style.transform = `translateX(${-140}px) rotate(${-4}deg)`;
-        right.style.transform = `translateX(${140}px) rotate(${4}deg)`;
+        left.style.transform = `translateX(${-120}px) rotate(${-4}deg)`;
+        right.style.transform = `translateX(${120}px) rotate(${4}deg)`;
       } else {
         // nasa baba pa ng kalahati → normal animation
         left.style.transform = `translateX(${-progress * 140}px) rotate(${-3 - progress}deg)`;
