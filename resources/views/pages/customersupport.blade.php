@@ -3,7 +3,7 @@
 @section('content')
 
 
-<link rel="stylesheet" href="{{ asset('css/customersupport.css') }}">
+<link rel="stylesheet" href="{{ asset('css/customersupport2.css') }}">
 
 <section style="background-image: url('banner/banner.png'); 
            

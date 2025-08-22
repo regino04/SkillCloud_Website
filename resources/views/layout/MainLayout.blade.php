@@ -12,7 +12,9 @@
 
   <style>
     /* Category colors */
-
+    .skillcloudlogo {
+      cursor: pointer;
+    }
 
     .container-card-footer {
       background-color: #24bdf0;
@@ -139,7 +141,7 @@
       bottom: 0;
       height: 3px;
       width: 0;
-      background-color: #007bff;
+      /* background-color: #007bff; */
       transition: width 0.3s ease;
     }
 
@@ -151,7 +153,7 @@
     /* Dating hover animation — ngayon nasa active */
     .nav-link.active::after {
       width: 100%;
-      background-color: #ff6600;
+      /* background-color: #ff6600; */
       /* pwede mong palitan */
     }
 
@@ -215,6 +217,7 @@
 
 
 
+
     /* Initial state: closed */
     .card.left {
 
@@ -262,13 +265,13 @@
       padding: 0;
       width: 100%;
       max-width: 100%;
-      
+
       /* alisin horizontal scroll */
     }
 
     @media (max-width: 768px) {
 
-      
+
       .container-card-footer {
         height: 750px;
 
@@ -415,7 +418,7 @@
     <div class="container">
 
       <!-- Logo -->
-      <a class="navbar-brand d-lg-none" href="#">
+      <a class="navbar-brand d-lg-none " href="#">
         <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="">
       </a>
 
@@ -430,9 +433,11 @@
         <ul class="navbar-nav w-100 d-flex align-items-center justify-content-between">
 
           <!-- Logo (for desktop view) -->
-          <li class="d-none d-lg-block" style="margin-right:20px;margin-left:-20px;">
-            <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="">
-          </li>
+          <li class="d-none d-lg-block skillcloudlogo" style="margin-right:20px;margin-left:-20px;">
+    <a href="https://www.skillcloud.au/">
+        <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="SkillCloud Logo">
+    </a>
+</li>
 
           <!-- Nav Items -->
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
