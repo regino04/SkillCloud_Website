@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/customersupport', function () {
 
     return view('pages.customersupport');
     // return view('layout2');

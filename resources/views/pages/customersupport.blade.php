@@ -188,8 +188,8 @@
           <label for="department" class="form-label">Choose Department</label>
           <select id="department" class="form-select">
             <option value="">Select Department</option>
-            <option value="it">I.T.</option>
-            <option value="hr">H.R.</option>
+            <option value="it">Information Technologies</option>
+            <option value="hr">Human Resources</option>
             <option value="design">Design</option>
             <option value="marketing">Marketing</option>
             <option value="finance">Finance</option>

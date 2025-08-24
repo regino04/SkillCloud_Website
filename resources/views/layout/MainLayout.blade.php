@@ -162,6 +162,23 @@
       width: 0;
     }
 
+    .footer-link,
+    .footer-link:visited,
+    .footer-link:active,
+    .footer-link:focus {
+      text-decoration: none;
+      color: #000;
+      /* default color (palitan mo kung white sa footer) */
+      transition: color 0.2s ease;
+      outline: none;
+      /* tanggal yung default outline sa click */
+    }
+
+    /* Hover: blue lang kapag naka-hover/focus */
+    .footer-link:hover {
+      color: #66b2ff;
+    }
+
     .info h4 {
 
       font-family: 'Poppins', sans-serif;
@@ -291,6 +308,7 @@
         margin-top: 20px;
         margin-left: 10px;
       }
+      
 
       /* Buttons full-width */
       .talk-btn,
@@ -414,11 +432,11 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" >
     <div class="container">
 
       <!-- Logo -->
-      <a class="navbar-brand d-lg-none " href="#">
+      <a class="navbar-brand d-lg-none " href="https://www.skillcloud.au/">
         <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="">
       </a>
 
@@ -434,26 +452,43 @@
 
           <!-- Logo (for desktop view) -->
           <li class="d-none d-lg-block skillcloudlogo" style="margin-right:20px;margin-left:-20px;">
-    <a href="https://www.skillcloud.au/">
-        <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="SkillCloud Logo">
-    </a>
-</li>
+            <a href="https://www.skillcloud.au/">
+              <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="SkillCloud Logo">
+            </a>
+          </li>
 
           <!-- Nav Items -->
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="https://www.skillcloud.au/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Our Story</a></li>
+
+         
+
+          <div class="dropdown">
+            <div class="dd-link nav-link">
+              Our Story
+              <img style="width:7px; margin-left:0px" src="icon/icon2.png" alt="">
+            </div>
+            <ul class="dd-menu">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">SEO</a></li>
+            </ul>
+          </div>
+
+
           <li class="nav-item"><a class="nav-link" href="#">What We Do</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Industries</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Success Stories</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pricing Plan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Join our Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/success-stories">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/pricing">Pricing Plan</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/join-our-team">Join our Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/blog">Blog</a></li>
 
           <!-- Let's Talk Button -->
           <li class="mt-2 mt-lg-0" style="margin-left:20px;margin-right:-20px;">
-            <label class="talk-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
-              Let's Talk &ensp; <i class="bi bi-hand-index-thumb-fill"></i>
-            </label>
+            <a href="https://www.skillcloud.au/contact-us" style="text-decoration:none;"> <label class="talk-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+                Let's Talk &ensp; <i class="bi bi-hand-index-thumb-fill"></i>
+              </label>
+            </a>
           </li>
         </ul>
       </div>
@@ -478,10 +513,12 @@
       <h2 class="custom-h2" style="font-weight:800;color:white;font-family:  'Poppins', sans-serif">Your workforce multiplier™!</h2>
       <h2 class="custom-h2" style="font-weight:600;color:white;font-family:  'Poppins', sans-serif">Discover a smarter</h2>
       <h2 class="custom-h2" style="margin:-50px;font-weight:600;color:#001f3f;">faster way to hire.</h2><br>
-      <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
-        <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
-        Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
-      </label>
+      <a href="https://www.skillcloud.au/contact-us" style="text-decoration:none;">
+        <label class="talent-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
+          <!-- Let's Talk <img style="width: 30px; foreground-color: white;" src="https://cdn.prod.website-files.com/67ba900d714c1b6114110de9/6835614e4c0ba387ea02a92a_0f06c1fe3c73f85430f7f71c416e7b17_click-tap.svg" alt=""> -->
+          Find your talent &ensp; <i class="bi bi-emoji-smile"></i></i>
+        </label>
+      </a>
 
       <div class="image-card">
         <div class="cards">
@@ -570,12 +607,17 @@
         aria-labelledby="nav-title">
         <label id="nav-title">Navigate</label>
         <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Our team</li>
-          <li>Services</li>
-          <li>Pricing</li>
-          <li>Testimonials</li>
+
+          <li>
+            <a href="https://www.skillcloud.au/" class="footer-link">Home</a>
+          </li>
+          <ul>
+            <li><a href="https://www.skillcloud.au/about-us" class="footer-link">About us</a></li>
+            <li><a href="https://www.skillcloud.au/our-team" class="footer-link">Our team</a></li>
+            <li><a href="https://www.skillcloud.au/services-1" class="footer-link">Services</a></li>
+            <li><a href="https://www.skillcloud.au/pricing" class="footer-link">Pricing</a></li>
+            <li><a href="https://www.skillcloud.au/testimonials" class="footer-link">Testimonials</a></li>
+          </ul>
         </ul>
       </section>
 
@@ -583,11 +625,13 @@
         aria-labelledby="follow-title">
         <h4 id="follow-title">Follow</h4>
         <ul>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>Linkedin</li>
-          <li>YouTube</li>
-          <li>X</li>
+
+          <li><a href="https://www.instagram.com/skillcloud.au/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61575682086193" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/skill-cloud/?viewAsMember=true" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/" class="footer-link" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://x.com/skillcloud_au" class="footer-link" target="_blank" rel="noopener noreferrer">X</a></li>
+
         </ul>
       </section>
 
@@ -595,9 +639,11 @@
         aria-labelledby="contact-title">
         <h4 id="contact-title">Contact</h4>
         <ul>
-          <li>Call Us: +(+61) 7 2146 9086</li>
-          <li>Email Us: hi@skillcloud.au</li>
-          <li>Customer Support</li>
+          <ul>
+            <li><a href="" class="footer-link">Call Us: +(+61) 7 2146 9086</a></li>
+            <li><a href="" class="footer-link">Email Us: hi@skillcloud.au</a></li>
+            <li><a href="/customersupport" class="footer-link">Customer Support</a></li>
+          </ul>
         </ul>
       </section>
 
@@ -605,13 +651,20 @@
         aria-labelledby="visit-title">
         <h4 id="visit-title">Visit</h4>
         <ul>
-          <li>Philippines:<br />
-            Suite 4022, 168 Golden Rock Bldg. Salcedo St Makati City PH
+          <li>
+            <a href="https://www.google.com.ua/maps/place/Print+my+Court/@45.253783,-69.4454689,17z/data=!3m1!4b1!4m6!3m5!1s0x4cb03fffffffffff:0xcb4d142bca73faf9!8m2!3d45.253783!4d-69.4454689!16s%2Fg%2F11vql_h73_?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" class="footer-link" target="_blank" rel="noopener noreferrer">
+              Philippines:<br>
+              Suite 4022, 168 Golden Rock Bldg. Salcedo St Makati City PH
+            </a>
           </li>
-          <li>Australia:<br />
-            2/290 Boundary Street<br />
-            Spring Hill, Brisbane<br />
-            4000 Queensland, Australia
+
+          <li>
+            <a href="https://www.google.com.ua/maps/place/Print+my+Court/@45.2537867,-69.4480438,17z/data=!3m1!4b1!4m6!3m5!1s0x4cb03fffffffffff:0xcb4d142bca73faf9!8m2!3d45.253783!4d-69.4454689!16s%2Fg%2F11vql_h73_?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D" class="footer-link" target="_blank" rel="noopener noreferrer">
+              Australia:<br>
+              2/290 Boundary Street<br>
+              Spring Hill, Brisbane<br>
+              4000 Queensland, Australia
+            </a>
           </li>
         </ul>
       </section>
