@@ -943,6 +943,31 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+
+  <script>
+    const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+
+    dropdowns.forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      let timeout;
+
+      // Show dropdown on hover
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        menu.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+      });
+
+      // Hide dropdown after a small delay when mouse leaves
+      dropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          menu.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+        }, 200);
+      });
+    });
+  </script>
 </body>
 
 </html>
