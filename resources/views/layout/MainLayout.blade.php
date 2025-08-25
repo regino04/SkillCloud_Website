@@ -304,8 +304,9 @@
     }
 
     /* kapag hover si parent, rotate yung arrow */
-    .nav-link:hover .nav-icon {
+    .nav-item.dropdown:hover .nav-icon {
       transform: rotate(-90deg);
+      transition: transform 0.3s ease;
     }
 
     .nav-link.dropdown-toggle::after {
