@@ -304,10 +304,10 @@
     }
 
     /* kapag hover si parent, rotate yung arrow */
-    .nav-item.dropdown:hover .nav-icon {
-    transform: rotate(-90deg);
-    transition: transform 0.3s ease;
-}
+    .nav-link:hover .nav-icon {
+      transform: rotate(-90deg);
+    }
+
     .nav-link.dropdown-toggle::after {
       display: none !important;
     }
@@ -541,25 +541,24 @@
 
 
 
-          <li class="nav-item dropdown" style="margin-right: 15px;">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button">
+          <li class="nav-item dropdown " style="margin-right: 15px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Our Story
               <img class="nav-icon" style="width:7px; margin-left:4px" src="icon/icon2.png" alt="">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1" style="min-width: 300px;">
-              <li><a class="dropdown-item" href="https://www.skillcloud.au/about-us">About Us</a></li>
-              <li><a class="dropdown-item" href="https://www.skillcloud.au/our-team">The People behind Skill Cloud</a></li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 300px;">
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/about-us">About Us</a></li>
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/our-team">The People behind Skill Cloud</a></li>
             </ul>
           </li>
-
           <li class="nav-item dropdown" style="margin-right: 15px;">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               What We Do
               <img class="nav-icon" style="width:7px; margin-left:4px" src="icon/icon2.png" alt="">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2" style="min-width: 250px;">
-              <li><a class="dropdown-item" href="https://www.skillcloud.au/operating-model">Operating Model</a></li>
-              <li><a class="dropdown-item" href="https://www.skillcloud.au/operating-model">Placement guarantee</a></li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 250px;">
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/operating-model">Operating Model</a></li>
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/operating-model">Placement guarantee</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -943,35 +942,7 @@
       s0.parentNode.insertBefore(s1, s0);
     })();
   </script>
-
   <!--End of Tawk.to Script-->
-
-  <!-- dropdown show -->
-
-  <script>
-    const dropdowns = document.querySelectorAll('.nav-item.dropdown');
-
-    dropdowns.forEach(dropdown => {
-      const toggle = dropdown.querySelector('.dropdown-toggle');
-      const menu = dropdown.querySelector('.dropdown-menu');
-      let timeout;
-
-      // Show dropdown on hover
-      dropdown.addEventListener('mouseenter', () => {
-        clearTimeout(timeout);
-        menu.classList.add('show');
-        toggle.setAttribute('aria-expanded', 'true');
-      });
-
-      // Hide dropdown after a small delay when mouse leaves
-      dropdown.addEventListener('mouseleave', () => {
-        timeout = setTimeout(() => {
-          menu.classList.remove('show');
-          toggle.setAttribute('aria-expanded', 'false');
-        }, 200);
-      });
-    });
-  </script>
 </body>
 
 </html>
