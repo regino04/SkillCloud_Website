@@ -132,7 +132,7 @@
       color: #000000;
       transition: color 0.3s ease;
       font-weight: 600;
-   
+
     }
 
     .nav-link::after {
@@ -296,6 +296,73 @@
       max-width: 100%;
 
       /* alisin horizontal scroll */
+    }
+
+    .nav-item.dropdown img {
+      transition: transform 0.3s ease;
+      /* smooth animation */
+    }
+
+    /* kapag hover si parent, rotate yung arrow */
+    .nav-link:hover .nav-icon {
+      transform: rotate(-90deg);
+    }
+
+    .nav-link.dropdown-toggle::after {
+      display: none !important;
+    }
+
+    /* underline effect sa dropdown-item */
+    .dropdown-item {
+      position: relative;
+      transition: padding-left 0.3s ease;
+
+
+
+      color: #000000;
+      font-weight: 600;
+
+      white-space: normal;
+      /* allow wrapping */
+      line-height: 1.4;
+      /* better spacing */
+      min-height: 40px;
+      /* pantay taas per row */
+      display: flex;
+      align-items: center;
+
+      background: none !important;
+
+    }
+
+    .dropdown-item:hover {
+      color: #000080;
+    }
+
+    .dropdown-item.effect::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #000080;
+      transition: width 0.3s ease;
+    }
+
+    .dropdown-item.effect:hover {
+      padding-left: 30px;
+      /* itutulak ang text pakanan */
+    }
+
+    .dropdown-item.effect:hover::before {
+      width: 10px;
+      /* haba ng guhit na sumusunod */
+    }
+
+    #navbarDropdown:hover {
+      color: #000080;
     }
 
     @media (max-width: 768px) {
@@ -472,74 +539,6 @@
           <!-- Nav Items -->
           <li class="nav-item" style="margin-right: 15px;"><a class="nav-link active" href="https://www.skillcloud.au/">Home</a></li>
 
-          <style>
-            .nav-item.dropdown img {
-              transition: transform 0.3s ease;
-              /* smooth animation */
-            }
-
-            /* kapag hover si parent, rotate yung arrow */
-            .nav-link:hover .nav-icon {
-              transform: rotate(-90deg);
-            }
-
-            .nav-link.dropdown-toggle::after {
-              display: none !important;
-            }
-
-            /* underline effect sa dropdown-item */
-            .dropdown-item {
-              position: relative;
-              transition: padding-left 0.3s ease;
-
-
-
-              color: #000000;
-              font-weight: 600;
-
-              white-space: normal;
-              /* allow wrapping */
-              line-height: 1.4;
-              /* better spacing */
-              min-height: 40px;
-              /* pantay taas per row */
-              display: flex;
-              align-items: center;
-        
-                 background: none !important;
-          
-            }
-
-            .dropdown-item:hover {
-              color: #000080;
-            }
-
-            .dropdown-item.effect::before {
-              content: "";
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              width: 0;
-              height: 2px;
-              background-color: #000080;
-              transition: width 0.3s ease;
-            }
-
-            .dropdown-item.effect:hover {
-              padding-left: 30px;
-              /* itutulak ang text pakanan */
-            }
-
-            .dropdown-item.effect:hover::before {
-              width: 10px;
-              /* haba ng guhit na sumusunod */
-            }
-
-            #navbarDropdown:hover {
-              color: #000080;
-            }
-          </style>
 
 
           <li class="nav-item dropdown " style="margin-right: 15px;">
