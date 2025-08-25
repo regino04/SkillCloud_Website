@@ -132,6 +132,7 @@
       color: #000000;
       transition: color 0.3s ease;
       font-weight: 600;
+   
     }
 
     .nav-link::after {
@@ -274,6 +275,17 @@
       top: 30px;
       left: 30px;
     }
+
+
+
+
+    .dropdown-menu {
+      position: absolute !important;
+      margin-top: 11px !important;
+      border-radius: 0px !important;
+      z-index: 1 !important;
+      padding-left: 20px;
+    }
   </style>
   <style>
     html,
@@ -308,7 +320,7 @@
         margin-top: 20px;
         margin-left: 10px;
       }
-      
+
 
       /* Buttons full-width */
       .talk-btn,
@@ -432,7 +444,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
 
       <!-- Logo -->
@@ -451,40 +463,265 @@
         <ul class="navbar-nav w-100 d-flex align-items-center justify-content-between">
 
           <!-- Logo (for desktop view) -->
-          <li class="d-none d-lg-block skillcloudlogo" style="margin-right:20px;margin-left:-20px;">
+          <li class="d-none d-lg-block skillcloudlogo" style="margin-right:50px;margin-left:-50px;">
             <a href="https://www.skillcloud.au/">
               <img src="logo/skill-cloud-logo.png" style="height: 40px;" alt="SkillCloud Logo">
             </a>
           </li>
 
           <!-- Nav Items -->
-          <li class="nav-item"><a class="nav-link active" href="https://www.skillcloud.au/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Our Story</a></li>
+          <li class="nav-item" style="margin-right: 15px;"><a class="nav-link active" href="https://www.skillcloud.au/">Home</a></li>
 
-         
+          <style>
+            .nav-item.dropdown img {
+              transition: transform 0.3s ease;
+              /* smooth animation */
+            }
 
-          <div class="dropdown">
-            <div class="dd-link nav-link">
+            /* kapag hover si parent, rotate yung arrow */
+            .nav-link:hover .nav-icon {
+              transform: rotate(-90deg);
+            }
+
+            .nav-link.dropdown-toggle::after {
+              display: none !important;
+            }
+
+            /* underline effect sa dropdown-item */
+            .dropdown-item {
+              position: relative;
+              transition: padding-left 0.3s ease;
+
+
+
+              color: #000000;
+              font-weight: 600;
+
+              white-space: normal;
+              /* allow wrapping */
+              line-height: 1.4;
+              /* better spacing */
+              min-height: 40px;
+              /* pantay taas per row */
+              display: flex;
+              align-items: center;
+        
+                 background: none !important;
+          
+            }
+
+            .dropdown-item:hover {
+              color: #000080;
+            }
+
+            .dropdown-item.effect::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 0;
+              height: 2px;
+              background-color: #000080;
+              transition: width 0.3s ease;
+            }
+
+            .dropdown-item.effect:hover {
+              padding-left: 30px;
+              /* itutulak ang text pakanan */
+            }
+
+            .dropdown-item.effect:hover::before {
+              width: 10px;
+              /* haba ng guhit na sumusunod */
+            }
+
+            #navbarDropdown:hover {
+              color: #000080;
+            }
+          </style>
+
+
+          <li class="nav-item dropdown " style="margin-right: 15px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Our Story
-              <img style="width:7px; margin-left:0px" src="icon/icon2.png" alt="">
-            </div>
-            <ul class="dd-menu">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Development</a></li>
-              <li><a href="#">SEO</a></li>
+              <img class="nav-icon" style="width:7px; margin-left:4px" src="icon/icon2.png" alt="">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 300px;">
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/about-us">About Us</a></li>
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/our-team">The People behind Skill Cloud</a></li>
             </ul>
-          </div>
+          </li>
+          <li class="nav-item dropdown" style="margin-right: 15px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              What We Do
+              <img class="nav-icon" style="width:7px; margin-left:4px" src="icon/icon2.png" alt="">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 250px;">
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/operating-model">Operating Model</a></li>
+              <li><a class="dropdown-item effect" href="https://www.skillcloud.au/operating-model">Placement guarantee</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Industries
+              <img class="nav-icon" style="width:7px; margin-left:4px" src="icon/icon2.png" alt="">
+            </a>
+
+            <style>
+              .row .col-md-4 .dropdown-item {
+                margin-top: 5px;
+              }
+            </style>
+
+            <ul class="dropdown-menu p-3 start-50 translate-middle-x"
+              aria-labelledby="navbarDropdown"
+              style="min-width: 950px;margin-left:50px">
+              <div class="row d-flex align-items-stretch">
+
+                <style>
+                  .industries-icon {
+                    width: 15px;
+
+                  }
+                </style>
+                <div class="col-md-4 d-flex flex-column" style="max-width: 330px;position:relative;margin:auto;">
+                  <a class="dropdown-item flex-fill" href="https://www.skillcloud.au/industries/construction">
+                    <img class="industries-icon" src="icon/industries/construction.png">&ensp;
+                    Construction
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/engineering-design-and-consultation">
+                    <img class="industries-icon" src="icon/industries/engineering.png" alt="Engineering Icon" style="width:24px; height:auto;">
+                    <span class="ms-2">Engineering Design and Consultation</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/drafting-drawing-and-prototyping">
+                    <img class="industries-icon" src="icon/industries/drafting.png" alt="Drafting Icon" style="width:24px; height:auto;">
+                    <span class="ms-2">Drafting, Drawing and Prototyping</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/business-administration-back-office-processing">
+                    <img class="industries-icon" src="icon/industries/business.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Business Administration & Back Office Processing</span>
+                  </a>
+
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/tax-accounting">
+                    <img class="industries-icon" src="icon/industries/tax.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Tax Accounting</span>
+                  </a>
+
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/corporate-accounting">
+                    <img class="industries-icon" src="icon/industries/corporate.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Corporate Accounting</span>
+                  </a>
+
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/recruitment-agencies">
+                    <img class="industries-icon" src="icon/industries/recruitment.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Recruitment Agencies</span>
+                  </a>
+
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/education-training">
+                    <img class="industries-icon" src="icon/industries/education.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Education & Training</span>
+                  </a>
+
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/human-resource">
+                    <img class="industries-icon" src="icon/industries/humanresources.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Human Resources</span>
+                  </a>
+                </div>
 
 
-          <li class="nav-item"><a class="nav-link" href="#">What We Do</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Industries</a></li>
+                <div class="col-md-4 d-flex flex-column" style="max-width: 300px;">
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/it-software-development">
+                    <img class="industries-icon" src="icon/industries/it.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">IT Software & Development</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/insurance">
+                    <img class="industries-icon" src="icon/industries/insurance.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Insurance</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/international-domestic-logistics">
+                    <img class="industries-icon" src="icon/industries/international.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">International / Domestic <span class="d-block">Logistics</span></span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/heavy-manufacturing">
+                    <img class="industries-icon" src="icon/industries/heavy.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Heavy Manufacturing</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/bespoke-manufacturing">
+                    <img class="industries-icon" src="icon/industries/bespoke.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Bespoke Manufacturing</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/fmcg">
+                    <img class="industries-icon" src="icon/industries/fmcg.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">FMCG</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/compliance-consultancies">
+                    <img class="industries-icon" src="icon/industries/compliance.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Compliance Consultancies</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/real-estate-management">
+                    <img class="industries-icon" src="icon/industries/realestate.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Real Estate Management</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/accounts-payable">
+                    <img class="industries-icon" src="icon/industries/accountpayable.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Accounts Payable</span>
+                  </a>
+                </div>
+
+
+                <div class="col-md-4 d-flex flex-column" style="max-width: 300px;">
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/wholesale-importation">
+                    <img class="industries-icon" src="icon/industries/wholesale.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Wholesale & Importation</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/marketing-and-sales-agencies">
+                    <img class="industries-icon" src="icon/industries/marketing.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Marketing and Sales Agencies</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/telecommunications-infrastructure">
+                    <img class="industries-icon" src="icon/industries/telecom.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Telecommunications Infrastructure</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/civil-and-road-infrastructure">
+                    <img class="industries-icon" src="icon/industries/civil.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Civil and Road Infrastructure</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/hospitality-retail">
+                    <img class="industries-icon" src="icon/industries/hospitality.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Hospitality & Retail</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/msme-micro-small-medium-enterprises">
+                    <img class="industries-icon" src="icon/industries/msme.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">MSME (Micro, Small & Medium Enterprises)</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/legal-practice">
+                    <img class="industries-icon" src="icon/industries/legal.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Legal Practice</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="https://www.skillcloud.au/industries/bookkeeping">
+                    <img class="industries-icon" src="icon/industries/bookkeeping.png" alt="" style="width:24px; height:auto;">
+                    <span class="ms-2">Book keeping</span>
+                  </a>
+                </div>
+
+
+              </div>
+            </ul>
+
+          </li>
+
+
+
+
+
           <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/success-stories">Success Stories</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/pricing">Pricing Plan</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/join-our-team">Join our Team</a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.skillcloud.au/blog">Blog</a></li>
 
           <!-- Let's Talk Button -->
-          <li class="mt-2 mt-lg-0" style="margin-left:20px;margin-right:-20px;">
+          <li class="mt-2 mt-lg-0" style="margin-left:50px;margin-right:-50px;">
             <a href="https://www.skillcloud.au/contact-us" style="text-decoration:none;"> <label class="talk-btn" style="font-weight:600; font-family:'Parkin Sans', sans-serif; cursor:pointer;">
                 Let's Talk &ensp; <i class="bi bi-hand-index-thumb-fill"></i>
               </label>
