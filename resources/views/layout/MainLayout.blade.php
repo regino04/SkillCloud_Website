@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon"  type="image/png" href="logo/skill-cloud-logo.png">
 
   <style>
     /* Category colors */
@@ -340,21 +341,24 @@
       color: #000080;
     }
 
-    .dropdown-item.effect::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0;
-      height: 2px;
-      background-color: #000080;
-      transition: width 0.3s ease;
-    }
+    @media (min-width: 768px) {
 
-    .dropdown-item.effect:hover {
-      padding-left: 30px;
-      /* itutulak ang text pakanan */
+      .dropdown-item.effect::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #000080;
+        transition: width 0.3s ease;
+      }
+
+      .dropdown-item.effect:hover {
+        padding-left: 30px;
+        /* itutulak ang text pakanan */
+      }
     }
 
     .dropdown-item.effect:hover::before {
@@ -368,6 +372,61 @@
 
     @media (max-width: 768px) {
 
+
+
+
+      .dropdown-menu .row {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 0 10px;
+
+        /* hide scrollbar (cross-browser) */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE/Edge */
+      }
+
+      .dropdown-menu .row::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+      }
+
+      .dropdown-menu .row>div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+        margin-left: -40px !important;
+
+        background-color: transparent;
+      }
+
+      .dropdown-menu {
+        min-width: auto !important;
+        /* auto width sa mobile */
+        width: 200px;
+
+      }
+
+      .navbar .dropdown-menu {
+        position: static !important;
+        /* hindi na absolute */
+        float: none !important;
+        transform: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border: none;
+        /* optional para flat look */
+        box-shadow: none;
+        /* optional tanggal shadow */
+      }
+
+      .navbar .dropdown-menu .row {
+        max-height: 150px;
+        /* scrollable pa rin */
+        overflow-y: auto;
+      }
 
       .container-card-footer {
         height: 750px;
